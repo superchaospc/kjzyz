@@ -454,6 +454,12 @@ section { padding: 56px 28px 100px; }
   display: block;
 }
 
+.card-symbol.official-logo img {
+  width: 78%;
+  height: 78%;
+  border-radius: 10px;
+}
+
 .card-text {
   flex: 1;
   min-width: 0;
@@ -791,6 +797,7 @@ const PRODUCTS = [
     id: 'nekobox', symbol: 'Nk', name: 'NekoBox', slogan: 'Android 客户端',
     description: 'Android 代理工具，支持 sing-box 等核心',
     color: '#7c3aed', scenes: ['vpn-tools'], isTool: true,
+    logoUrl: 'https://raw.githubusercontent.com/MatsuriDayo/NekoBoxForAndroid/main/app/src/main/ic_launcher-playstore.png',
     customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9L7 4l4 3 4-3 2 5v6a6 6 0 01-12 0V9z" fill="white" opacity="0.95"/><path d="M9 13h.01M15 13h.01" stroke="#7c3aed"/><path d="M10 16c1.2 1 2.8 1 4 0" stroke="#7c3aed"/></svg>',
     affiliateUrl: 'https://github.com/MatsuriDayo/NekoBoxForAndroid/releases'
   },
@@ -798,6 +805,7 @@ const PRODUCTS = [
     id: 'v2rayng', symbol: 'Vg', name: 'v2rayNG', slogan: 'Android 客户端',
     description: 'Android V2Ray / Xray 客户端下载',
     color: '#2563eb', scenes: ['vpn-tools'], isTool: true,
+    logoUrl: 'https://raw.githubusercontent.com/2dust/v2rayNG/master/V2rayNG/app/src/main/ic_launcher-web.png',
     customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7l7 12 7-12"/><path d="M8 4h8"/><circle cx="8" cy="4" r="1.4" fill="white"/><circle cx="16" cy="4" r="1.4" fill="white"/></svg>',
     affiliateUrl: 'https://github.com/2dust/v2rayNG/releases'
   },
@@ -805,6 +813,7 @@ const PRODUCTS = [
     id: 'v2rayn', symbol: 'Vn', name: 'v2rayN', slogan: '桌面客户端',
     description: 'Windows / macOS / Linux 代理客户端下载',
     color: '#0f766e', scenes: ['vpn-tools'], isTool: true,
+    logoUrl: 'https://raw.githubusercontent.com/2dust/v2rayN/master/v2rayN/v2rayN/Resources/v2rayN.ico',
     customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M7 9l5 6 5-6"/><path d="M9 21h6"/></svg>',
     affiliateUrl: 'https://github.com/2dust/v2rayN/releases'
   },
@@ -812,6 +821,7 @@ const PRODUCTS = [
     id: 'clash-verge', symbol: 'CV', name: 'Clash Verge', slogan: '桌面 GUI',
     description: 'Clash Verge Rev 多平台客户端下载',
     color: '#111827', scenes: ['vpn-tools'], isTool: true,
+    logoUrl: 'https://raw.githubusercontent.com/clash-verge-rev/clash-verge-rev/main/src-tauri/icons/icon.png',
     customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 5a7 7 0 10.5 9"/><path d="M12 7l3 5 3-5"/><path d="M7 17h10"/></svg>',
     affiliateUrl: 'https://github.com/clash-verge-rev/clash-verge-rev/releases'
   },
@@ -819,6 +829,7 @@ const PRODUCTS = [
     id: 'flclash', symbol: 'Fl', name: 'FlClash', slogan: '多平台客户端',
     description: 'Flutter 版 Clash Meta 客户端下载',
     color: '#f97316', scenes: ['vpn-tools'], isTool: true,
+    logoUrl: 'https://raw.githubusercontent.com/chen08209/FlClash/main/assets/images/icon.png',
     customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L6 13h5l-1 8 8-12h-5l1-6z" fill="white"/><path d="M11 13h4" stroke="#f97316"/></svg>',
     affiliateUrl: 'https://github.com/chen08209/FlClash/releases'
   },
@@ -826,6 +837,7 @@ const PRODUCTS = [
     id: 'clash-party', symbol: 'Cp', name: 'Clash Party', slogan: 'Mihomo GUI',
     description: 'Clash Party 多平台客户端下载',
     color: '#ec4899', scenes: ['vpn-tools'], isTool: true,
+    logoUrl: 'https://raw.githubusercontent.com/mihomo-party-org/clash-party/main/resources/icon.png',
     customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19l5-14 9 9-14 5z" fill="white"/><path d="M13 6l5-2M17 10l3 1M10 15l-2-2"/><path d="M9 11l4 4" stroke="#ec4899"/></svg>',
     affiliateUrl: 'https://github.com/mihomo-party-org/clash-party/releases'
   },
@@ -1006,7 +1018,18 @@ function renderCard(p) {
   if (p.isTool) cls.push('tool');
 
   let symbolHtml;
-  if (p.customLogo) {
+  if (p.logoUrl) {
+    const fallback = `this.replaceWith(Object.assign(document.createElement('span'),{textContent:'${p.symbol}',style:'color:${p.color || '#1d1d1f'};font-weight:700;font-size:18px'}))`;
+    symbolHtml = `
+      <div class="card-symbol official-logo">
+        <img src="${p.logoUrl}"
+             alt="${p.name}"
+             loading="lazy"
+             referrerpolicy="no-referrer"
+             onerror="${fallback}" />
+      </div>
+    `;
+  } else if (p.customLogo) {
     // 自定义 SVG logo（在品牌色背景上显示白色图形）
     symbolHtml = `<div class="card-symbol custom-logo" style="background:${p.color};border-color:${p.color}">${p.customLogo}</div>`;
   } else if (p.iconSlug) {
