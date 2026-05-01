@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>跨境资源站 — kjzyz.com</title>
+<meta name="description" content="跨境资源站 kjzyz.com · 精选机场、VPS、住宅 IP、指纹浏览器、美区 Apple ID 与海外社媒入口，跨境工作一站备齐。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ============ Design Tokens ============ */
+:root {
+  --accent: #0066cc;
+  --accent-hover: #0077ed;
+  --accent-tint: rgba(0, 102, 204, 0.06);
+  --accent-line: rgba(0, 102, 204, 0.18);
+
+  --ink: #1d1d1f;
+  --ink-soft: #424245;
+  --ink-mute: #6e6e73;
+  --ink-faint: #86868b;
+
+  --bg: #ffffff;
+  --bg-soft: #fbfbfd;
+  --bg-panel: #f5f5f7;
+
+  --line: rgba(0, 0, 0, 0.08);
+  --line-strong: rgba(0, 0, 0, 0.14);
+
+  --radius-sm: 10px;
+  --radius: 18px;
+  --radius-lg: 28px;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow: 0 4px 24px rgba(0,0,0,0.06);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.08);
+
+  --font-display: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', 'Inter', 'Microsoft YaHei', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  --tag-airport: #0071e3;
+  --tag-vps: #8b3dff;
+  --tag-residential: #2a9d8f;
+  --tag-fingerprint: #d4a017;
+  --tag-appleid: #e63946;
+}
+
+/* ============ Reset & Base ============ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'ss01', 'cv11';
+  overflow-x: hidden;
+}
+
+::selection { background: var(--accent); color: white; }
+
+a { color: inherit; text-decoration: none; }
+
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* ============ Top Disclaimer Bar ============ */
+.top-bar {
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--line);
+  width: 100%;
+}
+
+.top-bar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--ink-mute);
+  letter-spacing: 0.01em;
+}
+
+.top-bar-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.top-bar-icon svg {
+  width: 13px;
+  height: 13px;
+}
+
+.top-bar-text {
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+@media (max-width: 680px) {
+  .top-bar-inner { padding: 8px 16px; font-size: 11px; }
+  .top-bar-text { text-align: left; }
+}
+
+/* ============ Navigation ============ */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+nav.scrolled { border-bottom-color: var(--line); }
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-panel);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 6px 10px 6px 12px;
+  width: 280px;
+  max-width: 50vw;
+  transition: all 0.2s ease;
+}
+
+.nav-search:focus-within {
+  background: white;
+  border-color: var(--accent-line);
+  box-shadow: 0 0 0 3px var(--accent-tint);
+  width: 360px;
+}
+
+.nav-search-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: var(--ink-faint);
+}
+
+.nav-search-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.nav-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--ink);
+  min-width: 0;
+}
+
+.nav-search input::placeholder {
+  color: var(--ink-faint);
+}
+
+.nav-search-kbd {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--ink-mute);
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 2px 6px;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+  user-select: none;
+}
+
+.nav-search:focus-within .nav-search-kbd {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  .nav-search { width: auto; flex: 1; min-width: 0; }
+  .nav-search-kbd { display: none; }
+  .nav-setup span { display: none; }
+  .nav-right { flex: 1; gap: 8px; }
+  .nav-inner { padding: 0 16px; }
+}
+
+/* nav 教程入口按钮 */
+.nav-setup {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: white;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav-setup:hover {
+  color: var(--accent);
+  border-color: var(--accent-line);
+  background: var(--accent-tint);
+}
+
+.nav-setup svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 680px) {
+  .nav-setup {
+    padding: 7px 10px;
+    gap: 0;
+  }
+}
+
+/* ============ Hero · Apple Flat Style ============ */
+.hero {
+  padding: 96px 28px 64px;
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(40px, 6.5vw, 72px);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  margin-bottom: 18px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.15s forwards;
+}
+
+.hero h1 .accent-word {
+  color: var(--ink);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.hero-sub {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-mute);
+  letter-spacing: 0.12em;
+  margin: 0 auto;
+  line-height: 1.4;
+  font-weight: 500;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.28s forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 64px 20px 40px; }
+  .hero h1 { letter-spacing: -0.025em; }
+}
+
+/* ============ Section General ============ */
+section { padding: 56px 28px 100px; }
+
+#products { padding-top: 16px; }
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============ Group Header (分组标题条) ============ */
+.product-group {
+  margin-bottom: 56px;
+  scroll-margin-top: 80px;
+}
+
+.product-group:last-child { margin-bottom: 0; }
+
+.group-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.group-icon {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+.group-icon svg { width: 100%; height: 100%; }
+
+.group-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-right: 8px;
+}
+
+/* ============ Product Grid (横版宽卡) ============ */
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 1100px) {
+  .products { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 820px) {
+  .products { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 520px) {
+  .products { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 84px;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(0,0,0,0.025) 100%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.card:hover {
+  border-color: rgba(0, 0, 0, 0.18);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.card:hover::before { opacity: 1; }
+
+.card-symbol {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  background: white;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.card-symbol[data-len="1"] { font-size: 22px; }
+
+.card-symbol.custom-logo svg {
+  width: 56%;
+  height: 56%;
+  display: block;
+  fill: white;
+  stroke: white;
+}
+
+.card-symbol img {
+  width: 65%;
+  height: 65%;
+  object-fit: contain;
+  display: block;
+}
+
+.card-text {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.card-name {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-slogan {
+  font-size: 12px;
+  color: var(--ink-mute);
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Tool variant - 工具卡 */
+.card.tool {
+  background: white;
+}
+
+.card-arrow { display: none; }
+
+/* Empty state */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--ink-mute);
+  font-size: 14px;
+}
+
+
+
+/* ============ Footer / Disclaimer ============ */
+footer {
+  padding: 64px 28px 48px;
+  border-top: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.foot-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.foot-brand {
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.foot-brand .logo { font-size: 17px; margin-bottom: 10px; }
+
+.foot-brand p {
+  font-size: 13px;
+  color: var(--ink-mute);
+  line-height: 1.6;
+}
+
+.foot-bottom {
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+}
+
+.disclaimer {
+  margin: 32px 0 24px;
+  padding: 16px 20px;
+  background: var(--bg-panel);
+  border-radius: 10px;
+  font-size: 12px;
+  color: var(--ink-mute);
+  line-height: 1.7;
+  border-left: 2px solid var(--ink-faint);
+}
+
+.disclaimer strong {
+  color: var(--ink-soft);
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+/* ============ Toast ============ */
+.toast {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translate(-50%, 100px);
+  background: var(--ink);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  z-index: 200;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.toast-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 768px) {
+  section { padding: 40px 20px 72px; }
+}
+
+/* ============ Reveal on scroll ============ */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- ============ TOP DISCLAIMER BAR ============ -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <span class="top-bar-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    </span>
+    <span class="top-bar-text">本站工具仅供学习研究、跨境电商与海外业务等合法用途，请遵守所在地法律法规</span>
+  </div>
+</div>
+
+<!-- ============ NAV ============ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><span class="logo-dot"></span>跨境资源站</a>
+    <div class="nav-right">
+      <div class="nav-search">
+        <span class="nav-search-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+        </span>
+        <input type="text" id="searchInput" placeholder="搜索工具或服务" autocomplete="off" spellcheck="false" />
+        <kbd class="nav-search-kbd" id="searchKbd">⌘K</kbd>
+      </div>
+      <a href="setup.html" class="nav-setup">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        <span>使用教程</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO · Apple Flat ============ -->
+<header class="hero">
+  <h1>跨境<span class="accent-word">资源站</span></h1>
+  <p class="hero-sub">KJZYZ.COM</p>
+</header>
+
+<!-- ============ PRODUCT GROUPS · 分组分块 ============ -->
+<section id="products">
+  <div class="section-inner">
+    <div id="productGroups">
+      <!-- 分组卡片由 JS 渲染 -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <div class="logo"><span class="logo-dot"></span>跨境资源站</div>
+      <p>kjzyz.com · 精选跨境工具导航</p>
+    </div>
+
+    <div class="disclaimer">
+      <strong>免责声明：</strong>本站推荐的工具仅供学习研究、海外学术访问、跨境电商运营、出海业务推广等合法用途使用。请遵守所在地法律法规，不得用于任何违法活动。使用者应对自己的行为承担全部责任，本站不对任何使用行为及后果负责。
+    </div>
+
+    <div class="foot-bottom">
+      <span>© 2026 kjzyz.com · 跨境资源站</span>
+      <span>ALL RIGHTS RESERVED</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">
+  <span class="toast-dot"></span>
+  <span id="toastText">正在跳转至合作伙伴...</span>
+</div>
+
+<!-- ============ SCRIPTS ============ -->
+<script>
+/* ========== Product Data ========== */
+/* ========== 全部产品数据 ==========
+   字段说明：
+   - isTool: true 表示免费工具（不带 affiliate），false/缺省 表示 affiliate 商品
+   - color: logo 背景色（增加品牌识别度）
+   - scenes: 用于筛选的分类标签
+*/
+const PRODUCTS = [
+  // ============ 机场（3 个 affiliate）============
+  {
+    id: 'bitznet', symbol: 'Bz', name: 'Bitz Net', slogan: '稳定抗封',
+    description: '行业老牌，别家都封了它还稳稳在线',
+    color: '#1d1d1f', scenes: ['airport'],
+    customLogo: '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5" fill="white"/><rect x="14" y="3" width="7" height="7" rx="1.5" fill="white" opacity="0.55"/><rect x="3" y="14" width="7" height="7" rx="1.5" fill="white" opacity="0.55"/><rect x="14" y="14" width="7" height="7" rx="1.5" fill="white"/></svg>',
+    recommended: true, badge: 'EDITOR\'S PICK',
+    affiliateUrl: 'https://dir3.bnaffloop.com/#/register?code=lz4hDF8t'
+  },
+  {
+    id: 'dginv', symbol: '狗', name: '狗狗加速', slogan: '新手首选',
+    description: '用户量大，操作简单，新手入门最合适',
+    color: '#1d1d1f', scenes: ['airport'],
+    customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="9" r="1.6" fill="white"/><circle cx="17" cy="9" r="1.6" fill="white"/><path d="M5 15c1.5 2.2 4 3.5 7 3.5s5.5-1.3 7-3.5"/><circle cx="12" cy="13.5" r="1.2" fill="white"/></svg>',
+    recommended: false, badge: 'BEST VALUE',
+    affiliateUrl: 'https://invite.dginv.click/#/register?code=hDsj8QMu'
+  },
+  {
+    id: 'tagss', symbol: 'T', name: 'TAG', slogan: '覆盖国家最全',
+    description: '节点覆盖全球，你能想到的国家几乎都有',
+    color: '#1d1d1f', scenes: ['airport'],
+    customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 010 18M12 3a13 13 0 000 18"/></svg>',
+    recommended: false, badge: null,
+    affiliateUrl: 'https://tagss.pro/#/auth/ZPks0lvc'
+  },
+
+  // ============ VPS 专线（3 个 affiliate）============
+  {
+    id: 'dmit', symbol: 'Dm', name: 'DMIT', slogan: 'CN2 GIA 专线',
+    description: '顶级电信 CN2 GIA 直连，业内口碑标杆',
+    color: '#1d1d1f', scenes: ['vps'],
+    customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="2.2" fill="white"/><circle cx="18" cy="6" r="2.2" fill="white"/><circle cx="12" cy="18" r="2.2" fill="white"/><line x1="6" y1="6" x2="18" y2="6"/><line x1="6" y1="6" x2="12" y2="18"/><line x1="18" y1="6" x2="12" y2="18"/></svg>',
+    recommended: true, badge: 'PREMIUM',
+    affiliateUrl: 'https://www.dmit.io/aff.php?aff=1023'
+  },
+  {
+    id: 'lisahost', symbol: 'Li', name: 'LisaHost', slogan: '三网回程',
+    description: '三网回程优质，原生 IP 解锁流媒体',
+    color: '#1d1d1f', scenes: ['vps'],
+    customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="0"><rect x="4" y="4" width="16" height="5" rx="1" fill="white"/><rect x="4" y="10.5" width="16" height="5" rx="1" fill="white" opacity="0.6"/><rect x="4" y="17" width="16" height="3" rx="1" fill="white" opacity="0.4"/><circle cx="7" cy="6.5" r="0.8" fill="#a855f7"/><circle cx="7" cy="13" r="0.8" fill="#a855f7"/></svg>',
+    recommended: false, badge: null,
+    affiliateUrl: 'https://lisahost.com/aff.php?aff=2186'
+  },
+  {
+    id: 'vps', symbol: 'V·', name: 'V.PS', slogan: '全球节点丰富',
+    description: '全球数据中心覆盖广，按需选地区灵活',
+    color: '#1d1d1f', scenes: ['vps'],
+    customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5l7 14 7-14"/><circle cx="12" cy="19" r="0" fill="white"/></svg>',
+    recommended: false, badge: null,
+    affiliateUrl: 'https://vps.hosting/?affid=1776'
+  },
+
+  // ============ 住宅节点（1 个 affiliate）============
+  {
+    id: 'iproyal', symbol: 'Ip', name: 'IPRoyal', slogan: '8M+ 住宅 IP',
+    description: '全球 800 万真实住宅 IP，跨境业务必备',
+    color: '#1d1d1f', scenes: ['residential'],
+    customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6h-6v6H4a1 1 0 01-1-1z" fill="white"/></svg>',
+    recommended: true, badge: 'BEST FOR BUSINESS',
+    affiliateUrl: 'https://iproyal.cn/?r=zhuzhai'
+  },
+
+  // ============ 指纹浏览器（1 个 affiliate）============
+  {
+    id: 'adspower', symbol: 'Ad', name: 'AdsPower', slogan: '多账号管理',
+    description: '业界标准的指纹浏览器，多账号防关联',
+    color: '#1d1d1f', scenes: ['fingerprint'],
+    customLogo: '<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="13" height="13" rx="2" fill="white" opacity="0.4"/><rect x="6" y="6" width="13" height="13" rx="2" fill="white" opacity="0.7"/><rect x="9" y="9" width="12" height="12" rx="2" fill="white"/></svg>',
+    recommended: true, badge: 'INDUSTRY STANDARD',
+    affiliateUrl: 'https://www.adspower.com/share/UIhMfn'
+  },
+
+  // ============ 美区 Apple ID（2 个 affiliate）============
+  {
+    id: 'kxsw', symbol: 'Kx', name: 'KX Store', slogan: '美区 Apple ID',
+    description: '美区 Apple ID 即买即用，下载美区独占应用',
+    color: '#1d1d1f', scenes: ['appleid'],
+    customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="13" rx="1" fill="white"/><path d="M4 11h16" stroke="#e63946"/><path d="M12 8V21" stroke="#e63946"/><path d="M8 8c0-2.2 1.8-4 4-4s4 1.8 4 4"/></svg>',
+    recommended: true, badge: 'INSTANT DELIVERY',
+    affiliateUrl: 'https://store.kxsw.org/'
+  },
+  {
+    id: 'reegifts', symbol: 'Re', name: 'ReeGifts', slogan: '礼品卡 & Apple ID',
+    description: '美区礼品卡与账号一站购齐，自动发货',
+    color: '#1d1d1f', scenes: ['appleid'],
+    customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 21 4 21 4 12" fill="white"/><rect x="2" y="7" width="20" height="5" rx="0.5" fill="white"/><line x1="12" y1="21" x2="12" y2="7" stroke="#ff6b35"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z" fill="white"/></svg>',
+    recommended: false, badge: null,
+    affiliateUrl: 'https://www.reegifts.com/'
+  },
+
+  // ============ 免费工具 · 搜索 & 浏览器 ============
+  {
+    id: 'google', symbol: 'G', name: 'Google', slogan: '搜索引擎',
+    description: '全球最大搜索引擎',
+    color: '#4285f4', iconSlug: 'google', scenes: ['search'], isTool: true,
+    affiliateUrl: 'https://www.google.com'
+  },
+  {
+    id: 'chrome', symbol: 'C', name: 'Chrome', slogan: '浏览器',
+    description: '主流浏览器下载入口',
+    color: '#ea4335', iconSlug: 'googlechrome', scenes: ['browser'], isTool: true,
+    affiliateUrl: 'https://www.google.com/chrome/'
+  },
+
+  // ============ 免费工具 · 跨境邮箱 ============
+  {
+    id: 'gmail', symbol: 'M', name: 'Gmail', slogan: '注册海外账号',
+    description: '海外服务注册必备邮箱',
+    color: '#ea4335', iconSlug: 'gmail', scenes: ['mail'], isTool: true,
+    affiliateUrl: 'https://mail.google.com'
+  },
+  {
+    id: 'outlook', symbol: 'O', name: 'Outlook', slogan: '微软邮箱',
+    description: '微软邮箱服务',
+    color: '#0078d4', iconSlug: 'microsoftoutlook', scenes: ['mail'], isTool: true,
+    affiliateUrl: 'https://outlook.com'
+  },
+
+  // ============ 免费工具 · 海外社媒 ============
+  {
+    id: 'tiktok', symbol: 'T', name: 'TikTok', slogan: '短视频平台',
+    description: '海外短视频流量入口',
+    color: '#000000', iconSlug: 'tiktok', scenes: ['social'], isTool: true,
+    affiliateUrl: 'https://www.tiktok.com'
+  },
+  {
+    id: 'instagram', symbol: 'Ig', name: 'Instagram', slogan: '图文社交',
+    description: '图文社交主战场',
+    color: '#e1306c', iconSlug: 'instagram', scenes: ['social'], isTool: true,
+    affiliateUrl: 'https://www.instagram.com'
+  },
+  {
+    id: 'facebook', symbol: 'Fb', name: 'Facebook', slogan: '广告投放',
+    description: '广告投放与社交平台',
+    color: '#1877f2', iconSlug: 'facebook', scenes: ['social'], isTool: true,
+    affiliateUrl: 'https://www.facebook.com'
+  },
+  {
+    id: 'whatsapp', symbol: 'Wa', name: 'WhatsApp', slogan: '即时通讯',
+    description: '海外客户沟通常用通讯工具',
+    color: '#25d366', iconSlug: 'whatsapp', scenes: ['social'], isTool: true,
+    affiliateUrl: 'https://www.whatsapp.com/'
+  },
+  {
+    id: 'youtube', symbol: 'Yt', name: 'YouTube', slogan: '视频平台',
+    description: '视频内容平台',
+    color: '#ff0000', iconSlug: 'youtube', scenes: ['social'], isTool: true,
+    affiliateUrl: 'https://www.youtube.com'
+  },
+  {
+    id: 'linkedin', symbol: 'Li', name: 'LinkedIn', slogan: '职场社交',
+    description: '职场社交与 B2B 拓展',
+    color: '#0a66c2', iconSlug: 'linkedin', scenes: ['social'], isTool: true,
+    affiliateUrl: 'https://www.linkedin.com'
+  },
+  {
+    id: 'x', symbol: 'X', name: 'X', slogan: 'Twitter',
+    description: '原 Twitter，实时舆情广场',
+    color: '#000000', iconSlug: 'x', scenes: ['social'], isTool: true,
+    affiliateUrl: 'https://x.com'
+  },
+
+  // ============ 免费工具 · AI 工具 ============
+  {
+    id: 'chatgpt', symbol: 'C', name: 'ChatGPT', slogan: '通用对话 & 出图',
+    description: 'OpenAI 对话写作助手，支持图像生成',
+    color: '#10a37f', iconSlug: 'openai', scenes: ['ai'], isTool: true,
+    affiliateUrl: 'https://chat.openai.com'
+  },
+  {
+    id: 'gemini', symbol: 'G', name: 'Gemini', slogan: '多模态 & 出图',
+    description: 'Google AI，支持对话、图像生成与编辑',
+    color: '#4285f4', iconSlug: 'googlegemini', scenes: ['ai'], isTool: true,
+    affiliateUrl: 'https://gemini.google.com'
+  },
+  {
+    id: 'claude', symbol: 'C', name: 'Claude', slogan: '长文本与编码',
+    description: 'Anthropic 出品，擅长长文本与代码',
+    color: '#cc785c', iconSlug: 'anthropic', scenes: ['ai'], isTool: true,
+    affiliateUrl: 'https://claude.ai'
+  },
+  {
+    id: 'jimeng', symbol: '即', name: '即梦', slogan: 'AI 视频生成',
+    description: '字节出品，AI 图像与视频创作',
+    color: '#1d1d1f', scenes: ['ai'], isTool: true,
+    affiliateUrl: 'https://jimeng.jianying.com'
+  },
+  {
+    id: 'heygen', symbol: 'Hg', name: 'HeyGen', slogan: 'AI 数字人',
+    description: 'AI 数字人视频生成与翻译',
+    color: '#1d1d1f', scenes: ['ai'], isTool: true,
+    affiliateUrl: 'https://www.heygen.com'
+  },
+  {
+    id: 'elevenlabs', symbol: 'El', name: 'ElevenLabs', slogan: 'AI 语音合成',
+    description: '业界顶级 AI 语音克隆与合成',
+    color: '#1d1d1f', iconSlug: 'elevenlabs', scenes: ['ai'], isTool: true,
+    affiliateUrl: 'https://elevenlabs.io'
+  }
+];
+
+/* ========== 分组定义 ========== */
+const GROUPS = [
+  {
+    id: 'airport',
+    title: '机场推荐',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>'
+  },
+  {
+    id: 'vps',
+    title: 'VPS 自建专线',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="6" rx="1"/><rect x="2" y="15" width="20" height="6" rx="1"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>'
+  },
+  {
+    id: 'residential',
+    title: '住宅 IP 节点',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>'
+  },
+  {
+    id: 'fingerprint',
+    title: '指纹浏览器',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 11c0 3.5-1 6.5-3 9"/><path d="M14 13.5c-.5 4-2 6-3 7.5"/><path d="M9.5 14c0 2-1 3.5-1.5 4"/><path d="M17 8a5 5 0 00-10 0v6"/><path d="M19 11.5c0-2-.5-4-1.5-5.5"/><path d="M5 11c0-1 0-2 .5-3"/></svg>'
+  },
+  {
+    id: 'appleid',
+    title: '美区 Apple ID',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5L19 19a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2z"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>'
+  },
+  {
+    id: 'mail',
+    title: '跨境邮箱',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>'
+  },
+  {
+    id: 'ai',
+    title: 'AI 工具',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 014 4v1.5a4 4 0 01-4 4 4 4 0 01-4-4V6a4 4 0 014-4z"/><path d="M5 12.5a4 4 0 014-4 4 4 0 014 4v1.5a4 4 0 01-4 4 4 4 0 01-4-4z"/><path d="M11 18a4 4 0 014-4 4 4 0 014 4v1.5"/><circle cx="12" cy="12" r="1"/></svg>'
+  },
+  {
+    id: 'social',
+    title: '跨境社媒',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>'
+  },
+  {
+    id: 'search',
+    title: '搜索引擎',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>'
+  },
+  {
+    id: 'browser',
+    title: '浏览器',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>'
+  }
+];
+
+/* ========== Render Card ========== */
+function renderCard(p) {
+  const cls = ['card'];
+  if (p.isTool) cls.push('tool');
+
+  let symbolHtml;
+  if (p.customLogo) {
+    // 自定义 SVG logo（在品牌色背景上显示白色图形）
+    symbolHtml = `<div class="card-symbol custom-logo" style="background:${p.color};border-color:${p.color}">${p.customLogo}</div>`;
+  } else if (p.iconSlug) {
+    const colorParam = (p.color || '#1d1d1f').replace('#', '');
+    const fallback = `this.replaceWith(Object.assign(document.createElement('span'),{textContent:'${p.symbol}',style:'color:${p.color || '#1d1d1f'};font-weight:700;font-size:18px'}))`;
+    symbolHtml = `
+      <div class="card-symbol has-img">
+        <img src="https://cdn.simpleicons.org/${p.iconSlug}/${colorParam}"
+             alt="${p.name}"
+             loading="lazy"
+             onerror="${fallback}" />
+      </div>
+    `;
+  } else {
+    const style = p.color
+      ? `style="background:${p.color};border-color:${p.color};color:white"`
+      : '';
+    symbolHtml = `<div class="card-symbol" data-len="${p.symbol.length}" ${style}>${p.symbol}</div>`;
+  }
+
+  return `
+    <article class="${cls.join(' ')}" data-id="${p.id}" data-url="${p.affiliateUrl}" data-tool="${!!p.isTool}">
+      ${symbolHtml}
+      <div class="card-text">
+        <h3 class="card-name">${p.name}</h3>
+        <p class="card-slogan">${p.description || p.slogan}</p>
+      </div>
+    </article>
+  `;
+}
+
+/* ========== Render Groups ========== */
+const groupsEl = document.getElementById('productGroups');
+
+function renderGroups() {
+  groupsEl.innerHTML = GROUPS.map(g => {
+    const items = PRODUCTS.filter(p => p.scenes.includes(g.id));
+    if (items.length === 0) return '';
+
+    return `
+      <div class="product-group reveal" id="${g.id}">
+        <div class="group-header">
+          <span class="group-icon">${g.icon}</span>
+          <span class="group-title">${g.title}</span>
+        </div>
+        <div class="products">
+          ${items.map(renderCard).join('')}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // 绑定卡片点击
+  groupsEl.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+      const isTool = card.dataset.tool === 'true';
+      handleClick(card.dataset.id, card.dataset.url, isTool);
+    });
+  });
+
+  // 重新触发 reveal 动画观察
+  groupsEl.querySelectorAll('.reveal').forEach(el => io.observe(el));
+}
+
+/* ========== 跳转处理 ========== */
+function handleClick(id, url, isTool) {
+  const item = PRODUCTS.find(p => p.id === id);
+  showToast(isTool ? `跳转至 ${item?.name}...` : `即将跳转至 ${item?.name}...`);
+
+  if (window.gtag) {
+    gtag('event', isTool ? 'tool_click' : 'affiliate_click', { id });
+  }
+  console.log('[Click]', { id, url, isTool, time: new Date().toISOString() });
+
+  setTimeout(() => {
+    const w = window.open(url, '_blank', 'noopener,noreferrer');
+    if (w) w.opener = null;
+  }, 400);
+}
+
+/* ========== Toast ========== */
+const toast = document.getElementById('toast');
+const toastText = document.getElementById('toastText');
+let toastTimer;
+
+function showToast(msg) {
+  toastText.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2000);
+}
+
+/* ========== Site Search ========== */
+const searchInput = document.getElementById('searchInput');
+const searchKbd = document.getElementById('searchKbd');
+
+// 平台适配 ⌘K / Ctrl+K
+const isMac = /Mac|iPhone|iPad/.test(navigator.platform);
+if (!isMac && searchKbd) searchKbd.textContent = 'Ctrl K';
+
+function applySearch(q) {
+  const query = q.trim().toLowerCase();
+  const groups = document.querySelectorAll('.product-group');
+
+  groups.forEach(group => {
+    const cards = group.querySelectorAll('.card');
+    let visibleInGroup = 0;
+
+    cards.forEach(card => {
+      if (!query) {
+        card.style.display = '';
+        visibleInGroup++;
+        return;
+      }
+      const name = card.querySelector('.card-name')?.textContent.toLowerCase() || '';
+      const slogan = card.querySelector('.card-slogan')?.textContent.toLowerCase() || '';
+      const match = name.includes(query) || slogan.includes(query);
+      card.style.display = match ? '' : 'none';
+      if (match) visibleInGroup++;
+    });
+
+    // 整组无匹配时隐藏整组（含标题）
+    group.style.display = visibleInGroup === 0 ? 'none' : '';
+  });
+}
+
+if (searchInput) {
+  searchInput.addEventListener('input', e => applySearch(e.target.value));
+
+  // Esc 清空
+  searchInput.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      searchInput.value = '';
+      applySearch('');
+      searchInput.blur();
+    }
+  });
+
+  // ⌘K / Ctrl+K 聚焦
+  document.addEventListener('keydown', e => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      searchInput.focus();
+      searchInput.select();
+    }
+  });
+}
+
+/* ========== Nav Scroll ========== */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 8);
+});
+
+/* ========== Reveal on Scroll ========== */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      io.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+/* ========== Console Easter Egg ========== */
+console.log(
+  '%c跨境资源站',
+  'font: 800 38px -apple-system, PingFang SC, sans-serif; color:#0071e3; letter-spacing:-2px;'
+);
+console.log('%c// kjzyz.com · 跨境工作一站备齐', 'font:14px JetBrains Mono, monospace; color:#6e6e73;');
+
+/* ========== Init ========== */
+renderGroups();
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
