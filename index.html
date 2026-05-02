@@ -509,6 +509,21 @@ section { padding: 56px 28px 100px; }
   border-radius: 10px;
 }
 
+.logo-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.logo-fallback[data-len="1"] { font-size: 22px; }
+.logo-fallback[data-len="3"] { font-size: 15px; }
+
 .card-text {
   flex: 1;
   min-width: 0;
@@ -1089,17 +1104,17 @@ const GROUPS = [
 function renderCard(p) {
   const cls = ['card'];
   if (p.isTool) cls.push('tool');
+  const fallbackAttrs = `data-fallback-symbol="${p.symbol}" data-fallback-color="${p.color || '#1d1d1f'}"`;
 
   let symbolHtml;
   if (p.logoUrl) {
-    const fallback = `this.replaceWith(Object.assign(document.createElement('span'),{textContent:'${p.symbol}',style:'color:${p.color || '#1d1d1f'};font-weight:700;font-size:18px'}))`;
     symbolHtml = `
       <div class="card-symbol official-logo">
         <img src="${p.logoUrl}"
              alt="${p.name}"
-             loading="lazy"
+             ${fallbackAttrs}
              referrerpolicy="no-referrer"
-             onerror="${fallback}" />
+             onerror="replaceLogoWithFallback(this)" />
       </div>
     `;
   } else if (p.customLogo) {
@@ -1107,13 +1122,12 @@ function renderCard(p) {
     symbolHtml = `<div class="card-symbol custom-logo" style="background:${p.color};border-color:${p.color}">${p.customLogo}</div>`;
   } else if (p.iconSlug) {
     const colorParam = (p.color || '#1d1d1f').replace('#', '');
-    const fallback = `this.replaceWith(Object.assign(document.createElement('span'),{textContent:'${p.symbol}',style:'color:${p.color || '#1d1d1f'};font-weight:700;font-size:18px'}))`;
     symbolHtml = `
       <div class="card-symbol has-img">
         <img src="https://cdn.simpleicons.org/${p.iconSlug}/${colorParam}"
              alt="${p.name}"
-             loading="lazy"
-             onerror="${fallback}" />
+             ${fallbackAttrs}
+             onerror="replaceLogoWithFallback(this)" />
       </div>
     `;
   } else {
@@ -1132,6 +1146,28 @@ function renderCard(p) {
       </div>
     </article>
   `;
+}
+
+function replaceLogoWithFallback(img) {
+  if (!img || img.dataset.fallbackApplied === 'true') return;
+  img.dataset.fallbackApplied = 'true';
+
+  const symbol = img.dataset.fallbackSymbol || '?';
+  const color = img.dataset.fallbackColor || '#1d1d1f';
+  const fallback = document.createElement('span');
+  fallback.className = 'logo-fallback';
+  fallback.dataset.len = String(symbol.length);
+  fallback.textContent = symbol;
+  fallback.style.color = color;
+  img.replaceWith(fallback);
+}
+
+function ensureLogoFallbacks() {
+  document.querySelectorAll('.card-symbol img').forEach(img => {
+    if (!img.complete || img.naturalWidth === 0) {
+      replaceLogoWithFallback(img);
+    }
+  });
 }
 
 /* ========== Render Groups ========== */
@@ -1281,6 +1317,8 @@ if (searchInput && initialSearchQuery) {
   searchInput.value = initialSearchQuery;
   applySearch(initialSearchQuery);
 }
+window.addEventListener('load', () => setTimeout(ensureLogoFallbacks, 800));
+setTimeout(ensureLogoFallbacks, 3000);
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 
