@@ -1,5 +1,10 @@
 # 跨境资源站
 
+[![Website](https://img.shields.io/badge/Website-kjzyz.com-0066cc?style=flat-square)](https://kjzyz.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-superchaospc%2Fkjzyz-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/superchaospc/kjzyz)
+[![Deploy](https://img.shields.io/badge/Deploy-Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white)](https://www.netlify.com/)
+[![Static HTML](https://img.shields.io/badge/Static-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](./index.html)
+
 `kjzyz.com` 是一个面向跨境业务和海外工具使用场景的静态导航页，集中整理跨境社媒、邮箱、搜索引擎、AI 工具、科学上网客户端、机场、VPS、住宅 IP、指纹浏览器和 Apple ID 相关资源。
 
 ## 项目内容
