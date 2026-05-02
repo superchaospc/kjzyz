@@ -3,8 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>跨境资源站 — kjzyz.com</title>
-<meta name="description" content="跨境资源站 kjzyz.com · 精选机场、VPS、住宅 IP、指纹浏览器、美区 Apple ID & 其他国家 Apple ID 与海外社媒入口，跨境工作一站备齐。">
+<title>跨境资源站 kjzyz.com - 跨境工具导航、AI 工具、科学上网工具、VPS 与住宅 IP</title>
+<meta name="description" content="跨境资源站 kjzyz.com 精选跨境社媒、跨境邮箱、搜索引擎、AI 工具、科学上网工具、机场推荐、VPS、住宅 IP、指纹浏览器、美区 Apple ID &amp; 其他国家 Apple ID，跨境工作一站备齐。">
+<meta name="keywords" content="跨境资源站,跨境工具导航,跨境社媒,跨境邮箱,AI工具,科学上网工具,机场推荐,VPS推荐,住宅IP,指纹浏览器,Apple ID,ChatGPT,Claude,Clash Meta,v2rayNG,NekoBox">
+<meta name="robots" content="index, follow">
+<meta name="author" content="kjzyz.com">
+<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://kjzyz.com/">
+<link rel="sitemap" type="application/xml" href="https://kjzyz.com/sitemap.xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="跨境资源站">
+<meta property="og:title" content="跨境资源站 kjzyz.com - 跨境工具导航">
+<meta property="og:description" content="精选跨境社媒、邮箱、AI 工具、科学上网工具、VPS、住宅 IP、指纹浏览器和 Apple ID 相关资源。">
+<meta property="og:url" content="https://kjzyz.com/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="跨境资源站 kjzyz.com - 跨境工具导航">
+<meta name="twitter:description" content="跨境社媒、邮箱、AI 工具、科学上网工具、VPS、住宅 IP、指纹浏览器和 Apple ID 资源导航。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "跨境资源站",
+  "url": "https://kjzyz.com/",
+  "description": "精选跨境社媒、跨境邮箱、搜索引擎、AI 工具、科学上网工具、机场推荐、VPS、住宅 IP、指纹浏览器和 Apple ID 相关资源。",
+  "inLanguage": "zh-CN",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://kjzyz.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "跨境工具分类",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "跨境社媒" },
+    { "@type": "ListItem", "position": 2, "name": "跨境邮箱" },
+    { "@type": "ListItem", "position": 3, "name": "搜索引擎&浏览器" },
+    { "@type": "ListItem", "position": 4, "name": "AI 工具" },
+    { "@type": "ListItem", "position": 5, "name": "科学上网工具" },
+    { "@type": "ListItem", "position": 6, "name": "美区 Apple ID & 其他国家 Apple ID" },
+    { "@type": "ListItem", "position": 7, "name": "机场推荐" },
+    { "@type": "ListItem", "position": 8, "name": "VPS 自建专线" },
+    { "@type": "ListItem", "position": 9, "name": "住宅 IP 节点" },
+    { "@type": "ListItem", "position": 10, "name": "指纹浏览器" }
+  ]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1227,6 +1276,11 @@ console.log('%c// kjzyz.com · 跨境工作一站备齐', 'font:14px JetBrains M
 
 /* ========== Init ========== */
 renderGroups();
+const initialSearchQuery = new URLSearchParams(window.location.search).get('q');
+if (searchInput && initialSearchQuery) {
+  searchInput.value = initialSearchQuery;
+  applySearch(initialSearchQuery);
+}
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 
