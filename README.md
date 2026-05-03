@@ -13,7 +13,7 @@
 - 📮 跨境邮箱：Gmail、Outlook
 - 💳 跨境收款：派安盈、西联支付、PayPal、Stripe
 - 🔎 搜索引擎&浏览器：Google、Chrome
-- 🤖 AI 工具：ChatGPT、Gemini、Claude、即梦、HeyGen、ElevenLabs
+- 🤖 AI 工具：ChatGPT、Gemini、Claude、OpenClaw、Hermes Agent、即梦、HeyGen、ElevenLabs
 - 🧰 科学上网工具：NekoBox、v2rayNG、v2rayN、Clash Verge、Clash Meta、ClashMi、FlClash、Clash Party
 - 🧭 跨境基础服务：机场推荐、VPS 自建专线、住宅 IP 节点、指纹浏览器、紫鸟浏览器、Apple ID
 - 🎬 跨境视频剪辑：CapCut
