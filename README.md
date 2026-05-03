@@ -5,7 +5,7 @@
 [![Deploy](https://img.shields.io/badge/Deploy-Cloudflare%20Pages-F38020?style=flat-square&logo=cloudflare&logoColor=white)](https://pages.cloudflare.com/)
 [![Static HTML](https://img.shields.io/badge/Static-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](./index.html)
 
-`kjzyz.com` 是一个面向跨境业务和海外工具使用场景的静态导航页，集中整理跨境社媒、邮箱、跨境收款、搜索引擎、AI 工具、科学上网客户端、机场、VPS、住宅 IP、指纹浏览器和 Apple ID 相关资源。
+`kjzyz.com` 是一个面向跨境业务和海外工具使用场景的静态导航页，集中整理跨境社媒、邮箱、跨境收款、搜索引擎、AI 工具、跨境视频剪辑、科学上网客户端、机场、VPS、住宅 IP、指纹浏览器和 Apple ID 相关资源。
 
 ## ✨ 项目内容
 
@@ -16,6 +16,7 @@
 - 🤖 AI 工具：ChatGPT、Gemini、Claude、即梦、HeyGen、ElevenLabs
 - 🧰 科学上网工具：NekoBox、v2rayNG、v2rayN、Clash Verge、Clash Meta、FlClash、Clash Party
 - 🧭 跨境基础服务：机场推荐、VPS 自建专线、住宅 IP 节点、指纹浏览器、Apple ID
+- 🎬 跨境视频剪辑：CapCut
 
 ## 📁 文件结构
 
