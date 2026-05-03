@@ -5,13 +5,14 @@
 [![Deploy](https://img.shields.io/badge/Deploy-Cloudflare%20Pages-F38020?style=flat-square&logo=cloudflare&logoColor=white)](https://pages.cloudflare.com/)
 [![Static HTML](https://img.shields.io/badge/Static-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](./index.html)
 
-`kjzyz.com` 是一个面向跨境业务和海外工具使用场景的静态导航页，集中整理跨境社媒、邮箱、跨境收款、搜索引擎、AI 工具、跨境视频剪辑、科学上网客户端、机场、VPS、住宅 IP、指纹浏览器和 Apple ID 相关资源。
+`kjzyz.com` 是一个面向跨境业务和海外工具使用场景的静态导航页，集中整理跨境社媒、邮箱、跨境收款、跨境电商平台、搜索引擎、AI 工具、跨境视频剪辑、科学上网客户端、机场、VPS、住宅 IP、指纹浏览器和 Apple ID 相关资源。
 
 ## ✨ 项目内容
 
 - 📱 跨境社媒：TikTok、Instagram、Facebook、WhatsApp、YouTube、LinkedIn、X
 - 📮 跨境邮箱：Gmail、Outlook
 - 💳 跨境收款：派安盈、西联支付、PayPal、Stripe
+- 🛒 跨境电商平台：SHEIN、Temu、Amazon、TikTok Shop、AliExpress
 - 🔎 搜索引擎&浏览器：Google、Chrome
 - 🤖 AI 工具：ChatGPT、Gemini、Claude、OpenClaw、Hermes Agent、即梦、HeyGen、ElevenLabs
 - 🧰 科学上网工具：NekoBox、v2rayNG、v2rayN、Clash Verge、Clash Meta、ClashMi、FlClash、Clash Party
