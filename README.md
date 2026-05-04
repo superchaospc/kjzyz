@@ -12,7 +12,7 @@
 - 📱 跨境社媒：TikTok、Instagram、Facebook、WhatsApp、YouTube、LinkedIn、X
 - 📮 跨境邮箱：Gmail、Outlook
 - 💳 跨境收款：派安盈、西联支付、PayPal、Stripe
-- 🛒 跨境电商平台：SHEIN、Temu、Amazon、阿里国际站、eBay、Shopee、Lazada、Mercado Libre、Falabella、TikTok Shop、AliExpress
+- 🛒 跨境电商平台：SHEIN、Temu、Amazon、阿里国际站、eBay、Wayfair、Shopee、Lazada、Mercado Libre、Falabella、TikTok Shop、AliExpress
 - 🔎 搜索引擎&浏览器：Google、Chrome
 - 🤖 AI 工具：ChatGPT、Gemini、Claude、OpenClaw、Hermes Agent、即梦、HeyGen、ElevenLabs
 - 🧰 科学上网工具：NekoBox、v2rayNG、v2rayN、Clash Verge、Clash Meta、ClashMi、FlClash、Clash Party
