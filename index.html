@@ -800,7 +800,8 @@ const PRODUCTS = [
     id: 'dmit', symbol: 'Dm', name: 'DMIT', slogan: 'CN2 GIA 专线',
     description: '顶级电信 CN2 GIA 直连，业内口碑标杆',
     color: '#1d1d1f', scenes: ['vps'],
-    customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="2.2" fill="white"/><circle cx="18" cy="6" r="2.2" fill="white"/><circle cx="12" cy="18" r="2.2" fill="white"/><line x1="6" y1="6" x2="18" y2="6"/><line x1="6" y1="6" x2="12" y2="18"/><line x1="18" y1="6" x2="12" y2="18"/></svg>',
+    logoUrl: 'assets/logos/dmit.svg',
+    logoBg: '#111827',
     recommended: true, badge: 'PREMIUM',
     affiliateUrl: 'https://www.dmit.io/aff.php?aff=1023'
   },
@@ -808,7 +809,8 @@ const PRODUCTS = [
     id: 'lisahost', symbol: 'Li', name: 'LisaHost', slogan: '三网回程',
     description: '三网回程优质，原生 IP 解锁流媒体',
     color: '#1d1d1f', scenes: ['vps'],
-    customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="0"><rect x="4" y="4" width="16" height="5" rx="1" fill="white"/><rect x="4" y="10.5" width="16" height="5" rx="1" fill="white" opacity="0.6"/><rect x="4" y="17" width="16" height="3" rx="1" fill="white" opacity="0.4"/><circle cx="7" cy="6.5" r="0.8" fill="#a855f7"/><circle cx="7" cy="13" r="0.8" fill="#a855f7"/></svg>',
+    logoUrl: 'assets/logos/lisahost.png',
+    logoBg: '#111827',
     recommended: false, badge: null,
     affiliateUrl: 'https://lisahost.com/aff.php?aff=2186'
   },
@@ -816,7 +818,8 @@ const PRODUCTS = [
     id: 'vps', symbol: 'V·', name: 'V.PS', slogan: '全球节点丰富',
     description: '全球数据中心覆盖广，按需选地区灵活',
     color: '#1d1d1f', scenes: ['vps'],
-    customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5l7 14 7-14"/><circle cx="12" cy="19" r="0" fill="white"/></svg>',
+    logoUrl: 'assets/logos/vps.png',
+    logoBg: '#111827',
     recommended: false, badge: null,
     affiliateUrl: 'https://vps.hosting/?affid=1776'
   },
@@ -1326,8 +1329,9 @@ function renderCard(p) {
 
   let symbolHtml;
   if (p.logoUrl) {
+    const logoStyle = p.logoBg ? ` style="background:${p.logoBg};border-color:${p.logoBg}"` : '';
     symbolHtml = `
-      <div class="card-symbol official-logo">
+      <div class="card-symbol official-logo"${logoStyle}>
         <img src="${p.logoUrl}"
              alt="${p.name}"
              ${fallbackAttrs}
