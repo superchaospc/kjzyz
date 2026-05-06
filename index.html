@@ -99,6 +99,7 @@
   --tag-residential: #2a9d8f;
   --tag-fingerprint: #d4a017;
   --tag-appleid: #e63946;
+  --tag-android-app-store: #24cd77;
 }
 
 /* ============ Reset & Base ============ */
@@ -1257,6 +1258,16 @@ const PRODUCTS = [
     logoUrl: 'assets/logos/capcut.png',
     scenes: ['video-editing'], isTool: true,
     affiliateUrl: 'https://www.capcut.com/'
+  },
+
+  // ============ 免费工具 · 安卓手机跨境APP应用商店 ============
+  {
+    id: 'apkpure', symbol: 'Ap', name: 'APKPure', slogan: '安卓应用商店',
+    description: '海外 Android 应用 APK / XAPK 下载入口',
+    color: '#24cd77',
+    logoUrl: 'assets/logos/apkpure.png',
+    scenes: ['android-app-store'], isTool: true,
+    affiliateUrl: 'https://apkpure.com/'
   }
 ];
 
@@ -1301,6 +1312,11 @@ const GROUPS = [
     id: 'appleid',
     title: '美区 Apple ID & 其他国家 Apple ID',
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5L19 19a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2z"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>'
+  },
+  {
+    id: 'android-app-store',
+    title: '安卓手机跨境APP应用商店',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6"/><path d="M9 17h6"/><path d="M9 11l2 2 4-4"/></svg>'
   },
   {
     id: 'airport',
