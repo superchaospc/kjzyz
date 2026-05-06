@@ -686,6 +686,21 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body { background: #ffffff; }
+  .nav-setup { display: none; }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .card { break-inside: avoid; }
+}
 </style>
 </head>
 <body>
@@ -1384,13 +1399,13 @@ function renderCard(p) {
   }
 
   return `
-    <article class="${cls.join(' ')}" data-id="${p.id}" data-url="${p.affiliateUrl}" data-tool="${!!p.isTool}">
+    <a class="${cls.join(' ')}" href="${p.affiliateUrl}" target="_blank" rel="noopener noreferrer" data-id="${p.id}" data-url="${p.affiliateUrl}" data-tool="${!!p.isTool}">
       ${symbolHtml}
       <div class="card-text">
         <h3 class="card-name">${p.name}</h3>
         <p class="card-slogan">${p.description || p.slogan}</p>
       </div>
-    </article>
+    </a>
   `;
 }
 
@@ -1439,7 +1454,8 @@ function renderGroups() {
 
   // 绑定卡片点击
   groupsEl.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (event) => {
+      event.preventDefault();
       const isTool = card.dataset.tool === 'true';
       handleClick(card.dataset.id, card.dataset.url, isTool);
     });
