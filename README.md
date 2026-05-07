@@ -26,6 +26,8 @@
 ├── assets/       # 本地工具 Logo
 ├── index.html   # 主站页面
 ├── setup.html   # 备用/说明页面
+├── tiktok-guide.html # TikTok 账号注册与登录指南
+├── whatsapp-guide.html # WhatsApp 注册指南
 ├── robots.txt
 ├── sitemap.xml
 ├── _headers     # Cloudflare Pages 响应头

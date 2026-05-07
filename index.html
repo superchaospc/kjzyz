@@ -361,6 +361,66 @@ nav.scrolled { border-bottom-color: var(--line); }
   animation: fadeUp 0.7s ease 0.28s forwards;
 }
 
+.hero-actions {
+  margin: 30px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.4s forwards;
+}
+
+.hero-action {
+  min-height: 48px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: white;
+  color: var(--ink-soft);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+}
+
+.hero-action:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-line);
+  background: var(--bg-soft);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.hero-action-logo {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-action-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.hero-action-logo svg {
+  width: 22px;
+  height: 22px;
+  color: var(--accent);
+  display: block;
+}
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -369,6 +429,8 @@ nav.scrolled { border-bottom-color: var(--line); }
 @media (max-width: 768px) {
   .hero { padding: 64px 20px 40px; }
   .hero h1 { letter-spacing: -0.025em; }
+  .hero-actions { margin-top: 24px; gap: 10px; }
+  .hero-action { width: 100%; max-width: 320px; }
 }
 
 /* ============ Section General ============ */
@@ -727,6 +789,10 @@ footer {
         <input type="text" id="searchInput" placeholder="搜索工具或服务" autocomplete="off" spellcheck="false" />
         <kbd class="nav-search-kbd" id="searchKbd">⌘K</kbd>
       </div>
+      <a href="tiktok-guide.html" class="nav-setup">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 108 0V3"/><path d="M17 3h4"/><path d="M17 7h4"/><path d="M9 16A4 4 0 119 8"/></svg>
+        <span>TikTok 指南</span>
+      </a>
       <a href="setup.html" class="nav-setup">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
         <span>使用教程</span>
@@ -739,6 +805,20 @@ footer {
 <header class="hero">
   <h1>跨境<span class="accent-word">资源站</span></h1>
   <p class="hero-sub">KJZYZ.COM</p>
+  <div class="hero-actions" aria-label="常用教程入口">
+    <a href="tiktok-guide.html" class="hero-action primary">
+      <span class="hero-action-logo"><img src="assets/logos/tiktok.svg" alt=""></span>
+      如何注册 TikTok
+    </a>
+    <a href="setup.html" class="hero-action">
+      <span class="hero-action-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a13.5 13.5 0 010 18"/><path d="M12 3a13.5 13.5 0 000 18"/></svg></span>
+      如何使用专线 VPN
+    </a>
+    <a href="whatsapp-guide.html" class="hero-action">
+      <span class="hero-action-logo"><img src="assets/logos/whatsapp.svg" alt=""></span>
+      如何注册 WhatsApp
+    </a>
+  </div>
 </header>
 
 <!-- ============ PRODUCT GROUPS · 分组分块 ============ -->
@@ -1149,6 +1229,14 @@ const PRODUCTS = [
     logoUrl: 'assets/logos/tiktok.svg',
     scenes: ['social'], isTool: true,
     affiliateUrl: 'https://www.tiktok.com'
+  },
+  {
+    id: 'tiktok-guide', symbol: 'Tk', name: 'TikTok 注册指南', slogan: '账号注册与登录',
+    description: '邮箱注册、登录验证码与常见风控排查',
+    color: '#000000',
+    logoUrl: 'assets/logos/tiktok.svg',
+    scenes: ['social'], isTool: true,
+    affiliateUrl: 'tiktok-guide.html'
   },
   {
     id: 'instagram', symbol: 'Ig', name: 'Instagram', slogan: '图文社交',
