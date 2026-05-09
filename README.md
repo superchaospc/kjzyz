@@ -17,7 +17,7 @@
 - 🤖 AI 工具：ChatGPT、Gemini、Claude、OpenClaw、Hermes Agent、即梦、HeyGen、ElevenLabs
 - 🧰 科学上网工具：NekoBox、v2rayNG、v2rayN、Clash Verge、Clash Meta、ClashMi、FlClash、Clash Party
 - 🧭 跨境基础服务：机场推荐、VPS 自建专线、住宅 IP 节点（IPRoyal、1024Proxy）、IP 伪装度纯净度查询、指纹浏览器、紫鸟浏览器、Apple ID
-- 🧪 IP 检测工具：Whoer、IPinfo、ip-api、ping0.cc、Scamalytics、IPQualityScore / IPQS、IP2Location、IP2Proxy、IPPurity
+- 🧪 IP 检测工具：Whoer、IPinfo、ip-api、ping0.cc、Scamalytics、IPQualityScore / IPQS、IP2Location、IP2Proxy、IPPure
 - 🎬 跨境视频剪辑：CapCut
 
 ## 📁 文件结构
