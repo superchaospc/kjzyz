@@ -10,7 +10,9 @@ public Internet egress.
 
 - One proven public entry point on TCP port 443.
 - One Xray VLESS-XHTTP-REALITY inbound shared by all ten lines.
-- Ten independent clients, each with a unique UUID, email/name, and XHTTP path.
+- Ten independent clients, each with a unique UUID and email/name.
+- All clients share one random XHTTP path because the path belongs to the
+  inbound transport rather than to an individual VLESS client.
 - Xray user routing sends every backup client to a direct `freedom` outbound.
 - The REALITY key pair, server name, destination, and short ID are shared by the
   inbound because all clients use the same public entry point.
@@ -72,7 +74,7 @@ Excel workbook includes the connection fields plus an embedded QR code.
 - Only the intended public XHTTP-REALITY entry listens on TCP 443.
 - The statistics API listens only on `127.0.0.1:10085`.
 - Exactly ten named clients exist: `backup1` through `backup10`.
-- UUIDs and XHTTP paths are unique.
+- UUIDs are unique and all generated links carry the configured shared path.
 - A local Xray client test confirms each line reaches the Internet through
   `mly`'s public IPv4 egress.
 - All 40 requested files exist, are non-empty, and open successfully.
