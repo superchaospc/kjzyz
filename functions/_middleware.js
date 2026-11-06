@@ -7,5 +7,12 @@ export async function onRequest(context) {
     return Response.redirect(url.toString(), 301);
   }
 
+  if (/^\/ai-subscription-guide(?:\.html)?\/?$/.test(url.pathname)) {
+    return new Response("文章已删除", {
+      status: 410,
+      headers: { "Content-Type": "text/plain; charset=utf-8" },
+    });
+  }
+
   return context.next();
 }
