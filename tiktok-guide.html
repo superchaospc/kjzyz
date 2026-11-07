@@ -342,6 +342,12 @@ footer {
 .screens figcaption a {color:var(--accent);}
 @media(max-width:600px){.screens{grid-template-columns:1fr}.instruction{padding:18px 0}.instruction p{margin-top:8px}}
 .email-reminder {padding:12px 16px;border-left:3px solid var(--accent);background:var(--bg-panel);border-radius:4px;}
+.vpn-options {max-width:660px;margin:20px auto 0;padding:18px 20px;text-align:left;background:var(--bg-panel);border-left:3px solid var(--accent);border-radius:6px;}
+.vpn-options h2 {font-size:18px;margin-bottom:5px;}
+.vpn-options p {font-size:16px;line-height:1.7;color:var(--ink-soft);}
+.vpn-links {display:flex;gap:4px 20px;flex-wrap:wrap;margin:5px 0;}
+.vpn-links a {padding:6px 0;text-decoration:underline;text-underline-offset:3px;}
+.vpn-options small {color:var(--ink-mute);}
 </style>
 </head>
 <body>
@@ -367,7 +373,17 @@ footer {
     <img src="assets/logos/tiktok.svg" alt="TikTok">
   </div>
   <h1>注册前，请确认已设置好 TikTok 使用环境</h1>
-  <p class="hero-sub">还没设置好？先看<a class="inline-link" href="/tiktok-iphone-setup">《如何设置 iPhone 上的 TikTok 使用环境》</a>。<br>确认能正常打开 TikTok 并播放视频后，再继续下面的邮箱注册步骤。</p>
+  <p class="hero-sub">本教程以美区为例，请先连接有<strong>美国出口节点</strong>的 VPN 线路。手机设置步骤见<a class="inline-link" href="/tiktok-iphone-setup">《如何设置 iPhone 上的 TikTok 使用环境》</a>。</p>
+  <aside class="vpn-options" aria-labelledby="vpn-title">
+    <h2 id="vpn-title">还没有美国 VPN 线路？</h2>
+    <p>下面三家机场任选一家就行。购买含美国节点的套餐，在小火箭里导入线路、选中美国节点并连接。已有可用美国线路的读者可以直接开始注册。</p>
+    <div class="vpn-links">
+      <a class="inline-link" href="https://red.bnaffred.com/#/register?code=lz4hDF8t" rel="sponsored">Bitz Net</a>
+      <a class="inline-link" href="https://invite.dginv.click/#/register?code=hDsj8QMu" rel="sponsored">狗狗加速</a>
+      <a class="inline-link" href="https://tagss.pro/#/auth/ZPks0lvc" rel="sponsored">TAG</a>
+    </div>
+    <small>以上为推广链接，通过链接购买，本站可能获得佣金。</small>
+  </aside>
 </header>
 
 <div class="quick-nav" aria-label="页面导航">
