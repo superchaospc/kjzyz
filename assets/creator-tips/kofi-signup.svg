@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="412" viewBox="0 0 540 412">
+  <title>Ko-fi 注册表单示意：显示名称、邮箱、密码和条款确认</title>
+  <rect x="1" y="1" width="538" height="410" rx="20" fill="#f4fafc" stroke="#cedfe5"/>
+  <g font-family="system-ui, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="30" y="43" font-size="25" font-weight="700" fill="#20373e">Ko-fi</text>
+    <text x="510" y="42" text-anchor="end" font-size="15" fill="#47616b">注册字段示意</text>
+    <g fill="white" stroke="#bbd0d7"><rect x="30" y="65" width="480" height="76" rx="10"/><rect x="30" y="151" width="480" height="76" rx="10"/><rect x="30" y="237" width="480" height="76" rx="10"/></g>
+    <g font-size="21" font-weight="600" fill="#19353e"><text x="48" y="97">Display name</text><text x="48" y="183">Email address</text><text x="48" y="269">Choose a password</text></g>
+    <g font-size="17" fill="#4b646c"><text x="48" y="123">粉丝在页面上看到的名字</text><text x="48" y="209">能打开验证邮件的邮箱</text><text x="48" y="295">为 Ko-fi 设置的密码</text></g>
+    <rect x="32" y="345" width="23" height="23" rx="4" fill="white" stroke="#66808a" stroke-width="2"/>
+    <text x="69" y="364" font-size="18" fill="#304c56">阅读并同意条款后，提交注册</text>
+  </g>
+</svg>
