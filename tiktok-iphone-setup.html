@@ -154,6 +154,17 @@ nav.scrolled { border-bottom-color: var(--line); }
   line-height: 1.65;
 }
 
+.sim-reminder {
+  display: inline-block;
+  margin: 4px 0 14px;
+  padding: 10px 18px;
+  border-left: 4px solid #ae4c05;
+  border-radius: 6px;
+  background: #fff4dd;
+  color: #743200;
+  font-size: clamp(17px, 2.5vw, 21px);
+}
+
 .quick-nav {
   max-width: 980px;
   margin: 0 auto;
@@ -385,15 +396,19 @@ footer {
 
 
 <header class="hero"><div class="hero-logo"><img src="assets/logos/tiktok.svg" alt=""></div>
-<h1>如何设置 iPhone 上的 TikTok 使用环境</h1><p class="hero-sub">以美国洛杉矶为例，从手机还原出厂、安装应用，到扫码连接线路。</p></header>
-<div class="glance" aria-label="文章目录"><a href="#reset">还原出厂</a><a href="#region">地区与时区</a><a href="#apple-id">美区 ID</a><a href="#apps">下载应用</a><a href="#network">扫码连接</a><a href="#check">检查出口</a></div><main>
-<section class="section" id="reset"><div class="section-label">步骤 01</div><h2>在 iPhone 上还原出厂设置</h2><div class="guide-row"><div class="step-body">
-<p>先把要保留的照片和本地草稿另存好。需要备份整机时，打开「设置 → 你的姓名 → iCloud → iCloud 云备份 → 立即备份」，看到本次备份成功的时间后再继续。</p>
+<h1>如何设置 iPhone 上的 TikTok 使用环境</h1>
+<p class="sim-reminder"><strong>准备一台空闲的 iPhone，全程不要插 SIM 卡。</strong></p>
+<p class="hero-sub">以美国洛杉矶为例，从手机还原出厂、安装应用，到扫码连接线路。</p></header>
+<div class="glance" aria-label="文章目录"><a href="#reset">空机准备与还原</a><a href="#region">地区与时区</a><a href="#apple-id">美区 ID</a><a href="#apps">下载应用</a><a href="#network">扫码连接</a><a href="#check">检查出口</a></div><main>
+<section class="section" id="reset"><div class="section-label">步骤 01</div><h2>先取出 SIM 卡，再还原 iPhone</h2><div class="guide-row"><div class="step-body">
+<p>拿出准备用于 TikTok 的备用 iPhone。如果卡槽里有实体 SIM 卡，先把卡取出来。从还原出厂到以后使用 TikTok，都让卡槽保持空置，只连 Wi-Fi。需要收短信验证码时，把卡放在另一台手机上。</p>
+<p>如果这台 iPhone 已启用 eSIM，先在「设置 → 蜂窝网络」中逐个点进已启用的号码，关闭「启用此号码」。稍后设置新机时跳过号码转移或激活。</p>
+<p>把要保留的照片和本地草稿另存好。需要备份整机时，打开「设置 → 你的姓名 → iCloud → iCloud 云备份 → 立即备份」，看到本次备份成功的时间后再继续。</p>
 <p>在手机上依次点<strong>「设置 → 通用 → 传输或还原 iPhone → 抹掉所有内容和设置」</strong>。点「继续」，按提示输入设备密码和 Apple 账户密码。使用 eSIM 且打算保留号码时，选择「保留 eSIM 并抹掉数据」。</p>
 <p>等到出现「你好」，连上 Wi-Fi。地区可以在这里选「美国」。在「传输 App 与数据」页面选「不传输 App 与数据」，按新机完成设置。<a class="inline-link" href="https://support.apple.com/zh-cn/108931">查看 Apple 官方操作图</a></p>
 </div><figure class="guide-image"><a href="assets/tiktok-iphone-setup/reset.png"><img src="assets/tiktok-iphone-setup/reset.png" width="800" height="540" loading="lazy" alt="传输或还原 iPhone。还原；抹掉所有内容和设置"></a><figcaption>图 1 · 操作示意。点下面这一项，会清除手机上的数据。</figcaption></figure></div></section>
-<section class="section" id="region"><div class="section-label">步骤 02</div><h2>拔卡、连接 Wi-Fi，设置美国地区和时区</h2><div class="guide-row"><div class="step-body">
-<p>本例用一部只连 Wi-Fi 的专用机。取出实体 SIM 卡，再确认 Wi-Fi 可以上网。使用 eSIM 的机型可以在「设置 → 蜂窝网络」点进相应号码，关闭「启用此号码」。需要收验证码的号码请保留在能接收短信的手机上。</p>
+<section class="section" id="region"><div class="section-label">步骤 02</div><h2>连接 Wi-Fi，设置美国地区和时区</h2><div class="guide-row"><div class="step-body">
+<p>还原完成后，确认 iPhone 能通过 Wi-Fi 上网。如果保留了 eSIM，请到「设置 → 蜂窝网络」确认各号码仍处于关闭状态。</p>
 <p>打开<strong>「设置 → 通用 → 语言与地区 → 地区」</strong>，选「美国」。系统语言可按阅读习惯保留中文，也可以设成 English。</p>
 <p>如果准备连接美国洛杉矶的 VPN，在<strong>「设置 → 通用 → 日期与时间」</strong>关闭「自动设置」或「自动设定时区」，点「时区」或「时区城市」，搜索 <strong>Los Angeles（洛杉矶）</strong>。按城市选时区，夏令时切换也能对应；日期和分钟保持准确。</p>
 </div><figure class="guide-image"><a href="assets/tiktok-iphone-setup/region.png"><img src="assets/tiktok-iphone-setup/region.png" width="800" height="540" loading="lazy" alt="设置 · 通用。语言与地区　›　美国；日期与时间　›　洛杉矶"></a><figcaption>图 2 · 操作示意。美国有多个时区，按线路所在的城市选。</figcaption></figure></div></section>
