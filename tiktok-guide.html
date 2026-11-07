@@ -46,24 +46,6 @@ body {
 ::selection { background: var(--accent); color: white; }
 a { color: inherit; text-decoration: none; }
 
-.top-bar {
-  background: var(--bg-panel);
-  border-bottom: 1px solid var(--line);
-}
-.top-bar-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 8px 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 12px;
-  color: var(--ink-mute);
-}
-.top-bar-icon { display: inline-flex; opacity: 0.7; }
-.top-bar-icon svg { width: 13px; height: 13px; }
-
 nav {
   position: sticky;
   top: 0;
@@ -141,20 +123,12 @@ nav.scrolled { border-bottom-color: var(--line); }
   height: 48px;
   object-fit: contain;
 }
-.hero-eyebrow {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--ink-mute);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-  font-weight: 500;
-}
 .hero h1 {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(38px, 6vw, 68px);
-  line-height: 1.06;
+  line-height: 1.2;
+  text-wrap: balance;
   letter-spacing: -0.035em;
   margin-bottom: 18px;
 }
@@ -344,7 +318,6 @@ footer {
 }
 
 @media (max-width: 760px) {
-  .top-bar-inner { padding: 8px 18px; font-size: 11px; justify-content: flex-start; }
   .nav-inner { padding: 0 18px; }
   .nav-links { gap: 10px; }
   .nav-link span { display: none; }
@@ -368,21 +341,10 @@ footer {
 .screens figcaption {font-size:14px;line-height:1.65;color:var(--ink-soft);margin-top:12px;}
 .screens figcaption a {color:var(--accent);}
 @media(max-width:600px){.screens{grid-template-columns:1fr}.instruction{padding:18px 0}.instruction p{margin-top:8px}}
-.top-bar .top-bar-inner {font-size:15px;line-height:1.6;color:var(--ink-soft);padding-block:14px;}
-.top-bar .inline-link {text-decoration:underline;text-underline-offset:3px;}
 .email-reminder {padding:12px 16px;border-left:3px solid var(--accent);background:var(--bg-panel);border-radius:4px;}
 </style>
 </head>
 <body>
-
-<div class="top-bar">
-  <div class="top-bar-inner">
-    <span class="top-bar-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-    </span>
-    <span><strong>注册前提：</strong>先按<a class="inline-link" href="/tiktok-iphone-setup">《如何设置 iPhone 上的 TikTok 使用环境》</a>完成设置，确认 TikTok 可以正常打开，再开始注册。</span>
-  </div>
-</div>
 
 <nav id="nav">
   <div class="nav-inner">
@@ -404,9 +366,8 @@ footer {
   <div class="hero-logo">
     <img src="assets/logos/tiktok.svg" alt="TikTok">
   </div>
-  <div class="hero-eyebrow">ACCOUNT GUIDE</div>
-  <h1>TikTok 账号注册与登录指南</h1>
-  <p class="hero-sub">跟着手机截图，从「个人资料」进入注册，用自己的邮箱完成验证。已有账号可以直接跳到登录步骤。</p>
+  <h1>注册前，请确认已设置好 TikTok 使用环境</h1>
+  <p class="hero-sub">还没设置好？先看<a class="inline-link" href="/tiktok-iphone-setup">《如何设置 iPhone 上的 TikTok 使用环境》</a>。<br>确认能正常打开 TikTok 并播放视频后，再继续下面的邮箱注册步骤。</p>
 </header>
 
 <div class="quick-nav" aria-label="页面导航">
