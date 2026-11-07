@@ -388,6 +388,11 @@ footer {
 .walk-shot figcaption a {color:var(--accent);white-space:nowrap;}
 .tap-ring {position:absolute;border:2px solid #d73420;border-radius:6px;box-shadow:0 0 0 1px white;pointer-events:none;}
 @media(max-width:600px){.walk-shot{width:100%}.shot-grid{gap:12px}.walk-shot figcaption{max-width:none}}
+.airport-options {margin:18px 0;padding:16px 20px;border-left:3px solid var(--accent);background:var(--bg-panel);border-radius:6px;}
+.airport-options h3 {margin:0 0 4px;font-size:18px;color:var(--ink);}
+.airport-links {display:flex;flex-wrap:wrap;gap:6px 20px;margin:6px 0;}
+.airport-links a {display:inline-block;padding:5px 0;text-decoration:underline;text-underline-offset:3px;}
+.airport-options small {color:var(--ink-mute);}
 </style>
 </head><body>
 <nav id="nav">
@@ -440,7 +445,14 @@ footer {
 <p>安装后打开「设置 → 隐私与安全性 → 定位服务 → TikTok」，选<strong>「永不」</strong>。若列表暂时没有 TikTok，在它首次请求定位时点「不允许」。这样可以单独管理 TikTok 的定位权限。</p>
 <div class="shot-grid"><figure class="walk-shot"><div class="shot-label">⑤ 给 TikTok 选择「永不」</div><a class="shot-target" href="assets/tiktok-iphone-setup/location-never.webp" aria-label="放大查看：⑤ 给 TikTok 选择「永不」"><img src="assets/tiktok-iphone-setup/location-never.webp" width="640" height="1314" alt="Apple 的图用「地图」演示同一个权限菜单。操作时在列表中点 TikTok，再点红框中的「永不」。" loading="lazy"><span class="tap-ring" aria-hidden="true" style="left:6%;top:18%;width:88%;height:6.3%"></span></a><figcaption>Apple 的图用「地图」演示同一个权限菜单。操作时在列表中点 TikTok，再点红框中的「永不」。 <a href="https://support.apple.com/zh-cn/102647">Apple 支持</a></figcaption></figure></div></div></section>
 <section class="section" id="network"><div class="section-label">步骤 05</div><h2>用 Shadowrocket 扫码导入洛杉矶线路</h2>
-<div class="walk"><p>Shadowrocket 是连接工具，线路需要另行购买或自行搭建。服务商或搭建工具一般会提供一张<strong>节点二维码</strong>。在另一部手机或电脑上把码打开，方便 iPhone 扫描。节点码含连接凭据，请自己保存。</p>
+<div class="walk"><p>Shadowrocket 是连接工具，还需要一条可以导入的线路。已有线路的读者可以直接看下面的扫码步骤。</p>
+<aside class="airport-options"><h3>还没有线路？</h3><p>可以从本站推荐的三家机场中选一家。选套餐前，先查看节点列表里是否有你需要的美国城市。</p>
+<div class="airport-links" aria-label="机场推广链接">
+<a class="inline-link" href="https://red.bnaffred.com/#/register?code=lz4hDF8t" rel="sponsored">Bitz Net</a>
+<a class="inline-link" href="https://invite.dginv.click/#/register?code=hDsj8QMu" rel="sponsored">狗狗加速</a>
+<a class="inline-link" href="https://tagss.pro/#/auth/ZPks0lvc" rel="sponsored">TAG</a>
+</div><small>以上为推广链接，通过链接购买，本站可能获得佣金。</small></aside>
+<p>购买或自行搭建线路后，服务商或搭建工具一般会提供一张<strong>节点二维码</strong>。在另一部手机或电脑上把码打开，方便 iPhone 扫描。节点码含连接凭据，请自己保存。</p>
 <p>打开 Shadowrocket，点首页<strong>左上角的扫码图标</strong>，按提示允许使用相机，对准节点码。回到首页后，点选刚导入的<strong>美国洛杉矶节点</strong>。若收到的是订阅二维码，先展开导入的节点列表，再选洛杉矶。</p>
 <div class="shot-grid"><figure class="walk-shot"><div class="shot-label">① 点左上角扫码框</div><a class="shot-target" href="assets/tiktok-iphone-setup/scan-home.webp" aria-label="放大查看：① 点左上角扫码框"><img src="assets/tiktok-iphone-setup/scan-home.webp" width="392" height="696" alt="这是开发者发布的小火箭 iPhone 首页截图。左上角红框中的四角图标用于扫码，右上角的加号用于手动添加。" loading="lazy"><span class="tap-ring" aria-hidden="true" style="left:2%;top:4.1%;width:11%;height:6.7%"></span></a><figcaption>这是开发者发布的小火箭 iPhone 首页截图。左上角红框中的四角图标用于扫码，右上角的加号用于手动添加。 <a href="https://apps.apple.com/hk/app/shadowrocket/id932747118">开发者 App Store 截图</a></figcaption></figure></div>
 <p>打开首页连接开关。第一次出现「添加 VPN 配置」时点「允许」，按提示验证设备密码。若希望这部专用机统一通过所选节点连接，可在「全局路由」选择「代理」。<a class="inline-link" href="/setup">查看客户端配置说明</a></p>
