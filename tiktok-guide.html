@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TikTok 账号注册与登录指南 — 跨境资源站 · kjzyz.com</title>
-<meta name="description" content="TikTok 账号注册、邮箱验证、登录验证码与 iPhone 注册风控注意事项整理。">
+<meta name="description" content="用 iPhone 实际界面说明 TikTok 邮箱注册、验证码、登录与找回密码，并提供官方申诉入口。">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://kjzyz.com/tiktok-guide.html">
+<link rel="canonical" href="https://kjzyz.com/tiktok-guide">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -355,6 +355,19 @@ footer {
   .step { grid-template-columns: 38px 1fr; gap: 12px; }
   .note-grid { grid-template-columns: 1fr; }
 }
+
+.section { scroll-margin-top: 58px; }
+.instruction { padding: 22px 0; border-top: 1px solid var(--line); }
+.instruction h3 { display:flex; align-items:baseline; gap:12px; font-size:clamp(19px,3vw,24px); }
+.instruction h3 span { color:var(--accent);font:600 15px var(--font-mono); }
+.instruction p { max-width:76ch;color:var(--ink-soft);font-size:16px;line-height:1.85;margin-top:10px; }
+.screens { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px;margin:18px 0 0;align-items:start; }
+.screens figure {margin:0;padding:14px;background:var(--bg-panel);border:1px solid var(--line);border-radius:12px;max-width:465px;}
+.screens .zoom {display:block;cursor:zoom-in;}
+.screens img {display:block;height:auto;width:auto;max-width:100%;max-height:350px;margin:0 auto;}
+.screens figcaption {font-size:14px;line-height:1.65;color:var(--ink-soft);margin-top:12px;}
+.screens figcaption a {color:var(--accent);}
+@media(max-width:600px){.screens{grid-template-columns:1fr}.instruction{padding:18px 0}.instruction p{margin-top:8px}}
 </style>
 </head>
 <body>
@@ -372,11 +385,11 @@ footer {
   <div class="nav-inner">
     <a href="index.html" class="logo"><span class="logo-dot"></span>跨境资源站</a>
     <div class="nav-links">
-      <a href="setup.html" class="nav-link">
+      <a href="/tiktok-iphone-setup" class="nav-link" aria-label="iPhone 环境设置">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        <span>使用教程</span>
+        <span>iPhone 环境设置</span>
       </a>
-      <a href="index.html" class="nav-link">
+      <a href="/" class="nav-link" aria-label="返回首页">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         <span>返回首页</span>
       </a>
@@ -390,143 +403,34 @@ footer {
   </div>
   <div class="hero-eyebrow">ACCOUNT GUIDE</div>
   <h1>TikTok 账号注册与登录指南</h1>
-  <p class="hero-sub">把邮箱准备、App 注册、登录验证码、iPhone 注册风控这些容易卡住的环节整理成一份清晰流程。</p>
+  <p class="hero-sub">跟着手机截图，从「个人资料」进入注册，用自己的邮箱完成验证。已有账号可以直接跳到登录步骤。</p>
 </header>
 
 <div class="quick-nav" aria-label="页面导航">
   <a href="#register">注册 TikTok</a>
   <a href="#login">登录 TikTok</a>
-  <a href="#risk">注册后封号</a>
-  <a href="#iphone">iPhone 建议</a>
+  <a href="#risk">遇到问题</a>
+  <a href="#iphone">iPhone 安装</a>
 </div>
 
 <main>
-  <section class="section" id="register">
-    <div class="section-label">Part 01</div>
-    <h2>如何自己注册 TikTok 账号</h2>
-    <p class="section-desc">推荐先准备一个可正常收信的邮箱，再在 iPhone 的 TikTok App 内完成注册。生日、密码和验证码按 App 提示如实填写。</p>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <div class="step-body">
-          <h3>准备一个 Outlook 邮箱</h3>
-          <p>在电脑浏览器打开 <a class="inline-link" href="https://outlook.com" target="_blank" rel="noopener noreferrer">outlook.com</a>，或在 iPhone 下载 Outlook App，注册一个新的 Outlook 邮箱。</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <div class="step-body">
-          <h3>打开 TikTok App 选择邮箱注册</h3>
-          <p>在 iPhone 的 TikTok App 里选择使用邮箱注册，输入刚准备好的邮箱，然后按照 App 页面提示继续操作。</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div class="step-body">
-          <h3>填写生日与密码</h3>
-          <p>生日需满足平台年龄要求，建议按真实信息填写。密码建议包含大写字母、小写字母、数字和特殊符号，降低登录异常与忘记密码的风险。</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <div class="step-body">
-          <h3>不要在同一台手机上频繁注册</h3>
-          <p>同一部手机不要短时间连续注册多个 TikTok 账号。经验上可以每隔两三天再注册一个，避免被平台误判为批量自动化注册。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="login">
-    <div class="section-label">Part 02</div>
-    <h2>如何登录 TikTok</h2>
-    <p class="section-desc">TikTok 常会把验证码发到注册邮箱，所以登录前先确认邮箱可以正常打开、收信和查看验证码。</p>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <div class="step-body">
-          <h3>先登录对应邮箱</h3>
-          <p>如果 TikTok 账号是 Outlook 邮箱，就先打开 <a class="inline-link" href="https://outlook.com" target="_blank" rel="noopener noreferrer">outlook.com</a>；如果是 Gmail，就打开 <a class="inline-link" href="https://gmail.com" target="_blank" rel="noopener noreferrer">gmail.com</a>。也可以在 iPhone 上用 Outlook 或 Gmail App 登录邮箱。</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <div class="step-body">
-          <h3>再登录 TikTok</h3>
-          <p>在手机 TikTok App 输入账号和密码。电脑端也可以访问 <a class="inline-link" href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">tiktok.com</a> 登录，流程和手机端基本一致。</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div class="step-body">
-          <h3>查看邮箱验证码</h3>
-          <p>如果账号和密码正确，TikTok App 通常会提示向邮箱发送验证码。回到邮箱收件箱，找到 TikTok 发来的邮件。</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <div class="step-body">
-          <h3>输入验证码完成登录</h3>
-          <p>将邮件中的验证码输入 TikTok App，即可完成登录。若没收到邮件，先检查垃圾邮件、广告邮件和邮箱是否登录的是同一个账号。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="risk">
-    <div class="section-label">Part 03</div>
-    <h2>为什么 iPhone 上一注册就被封</h2>
-    <p class="section-desc">常见原因不是某一个邮箱或某一条线路本身，而是设备、网络、注册频率、历史行为叠加后被平台风控系统判断为异常注册。</p>
-
-    <div class="note-grid">
-      <div class="note">
-        <h3>可能的核心原因</h3>
-        <p>同一部手机短时间注册过多账号，或者设备环境长期出现异常注册行为，可能被平台标记为批量注册风险。</p>
-      </div>
-      <div class="note">
-        <h3>更稳妥的做法</h3>
-        <p>减少注册频率，尽量使用长期稳定、干净的设备环境。注册后先正常使用，不要马上进行高频操作。</p>
-      </div>
-    </div>
-
-    <div class="callout">
-      <div class="callout-label">处理思路</div>
-      <p>如果某台 iPhone 连续出现刚注册就受限，可以换用另一台正常使用 TikTok 的 iPhone，或先在电脑端 tiktok.com 完成注册，等待约 48 小时后再回到这台手机登录。这里是经验性建议，不保证一定适用于所有账号。</p>
-    </div>
-  </section>
-
-  <section class="section" id="iphone">
-    <div class="section-label">Part 04</div>
-    <h2>如何降低二手 iPhone 的注册风险</h2>
-    <p class="section-desc">如果长期用于跨境账号注册，设备来源和设备状态会明显影响成功率。核心不是追求大量注册，而是保持环境稳定、真实、低频。</p>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <div class="step-body">
-          <h3>避免使用历史复杂的设备</h3>
-          <p>国行二手 iPhone 如果曾被多人频繁用于注册账号，可能已经积累了较多异常记录。换机不一定立刻解决问题，但干净设备通常更稳。</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <div class="step-body">
-          <h3>美版有锁 iPhone 的经验观察</h3>
-          <p>有用户反馈美版有锁全新 iPhone 因为新机、且自带美国 eSIM，注册 TikTok 账号更稳定。价格和可用性会随市场变化，购买前请自行核实。</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div class="step-body">
-          <h3>不要抹掉 eSIM</h3>
-          <p>部分美版有锁 iPhone 没有实体 SIM 卡槽，只能使用 eSIM。还原出厂设置时不要选择抹掉 eSIM，否则后续激活和使用可能变复杂。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
+<section class="section" id="register"><h2>在 iPhone 上用邮箱注册</h2><p class="section-desc">准备一个自己能长期收信、还没有绑定其他 TikTok 账号的邮箱。已有的 Gmail、Outlook 等邮箱都可以。下图来自不同版本的 App，个别按钮名称和出现顺序可能不同；点截图可放大。 <a class="inline-link" href="https://support.tiktok.com/en/getting-started/creating-an-account/creating-an-account">TikTok 官方注册说明</a></p><article class="instruction"><h3><span>01</span>打开 TikTok，找到「注册」</h3><p>如果先看到视频，点右下角人形图标 <strong>Profile（个人资料）</strong>。看到 <strong>Log in to TikTok（登录）</strong> 时，点页面底部的 <strong>Sign up（注册）</strong>。看到 <strong>Sign up for TikTok</strong> 后，点 <strong>Use phone or email（使用手机号或邮箱）</strong>。</p>
+<div class="screens"><figure><a class="zoom" href="assets/tiktok-register/profile-tab.webp" aria-label="放大查看：视频页底部右侧的个人资料图标"><img src="assets/tiktok-register/profile-tab.webp" width="780" height="311" alt="视频页底部右侧的个人资料图标" loading="lazy"></a><figcaption>① 视频页下方，点最右边红框中的人形图标。 <a href="https://news.mynavi.jp/article/20241018-3045141/">マイナビニュース · iPhone 操作截图</a></figcaption></figure>
+<figure><a class="zoom" href="assets/tiktok-register/signup.webp" aria-label="放大查看：TikTok 注册页的 Use phone or email 选项"><img src="assets/tiktok-register/signup.webp" width="277" height="367" alt="TikTok 注册页的 Use phone or email 选项" loading="lazy"></a><figcaption>② 认准标题 Sign up for TikTok，点第一项 Use phone or email。 <a href="https://www.living50.com/hubfs/E-Book%20-%20Social%20Media%20What%20Is%20it%20All%20About%3F.pdf#page=35">Living50+ · TikTok 操作截图</a></figcaption></figure></div></article><article class="instruction"><h3><span>02</span>填真实生日，切换到 Email</h3><p>遇到生日页时，滑动年、月、日选好自己的出生日期，核对后点 <strong>Next（下一步）</strong>。如果你的版本先问邮箱，就先填邮箱，再按提示补生日。</p>
+<p>看到 <strong>Phone</strong> 和 <strong>Email</strong> 两个标签时，点 <strong>Email（邮箱）</strong>。在 Email address 一栏输入完整地址，检查拼写和后缀，再点下一步。</p>
+<div class="screens"><figure><a class="zoom" href="assets/tiktok-register/birthday.webp" aria-label="放大查看：iPhone 生日页，下方可滚动选择年月日"><img src="assets/tiktok-register/birthday.webp" width="533" height="1150" alt="iPhone 生日页，下方可滚动选择年月日" loading="lazy"></a><figcaption>③ 页面底部是日期滚轮。确认上方显示的是自己的生日，再点红色按钮。 <a href="https://news.mynavi.jp/article/20241018-3045141/">マイナビニュース · iPhone 操作截图</a></figcaption></figure>
+<figure><a class="zoom" href="assets/tiktok-register/email-tab.webp" aria-label="放大查看：Email 标签选中后显示 Email address 输入框"><img src="assets/tiktok-register/email-tab.webp" width="312" height="287" alt="Email 标签选中后显示 Email address 输入框" loading="lazy"></a><figcaption>④ Email 下方出现横线时，就可以输入邮箱了。 <a href="https://www.living50.com/hubfs/E-Book%20-%20Social%20Media%20What%20Is%20it%20All%20About%3F.pdf#page=35">Living50+ · TikTok 操作截图</a></figcaption></figure></div></article><article class="instruction"><h3><span>03</span>去邮箱收信，再回 TikTok 完成验证</h3><p>如果 App 提示输入邮箱验证码，先保留当前页面。切到邮件 App，打开 TikTok 刚发来的邮件，再回到 TikTok，把最新验证码填进输入格。验证码只在自己的验证页面使用。</p>
+<p>如果邮件显示 <strong>Verify your email address（验证邮箱地址）</strong> 按钮，核对是本次注册发起的验证邮件，点按钮，完成后返回 TikTok 继续。</p>
+<div class="screens"><figure><a class="zoom" href="assets/tiktok-register/code-field.webp" aria-label="放大查看：TikTok 验证码输入格的局部截图"><img src="assets/tiktok-register/code-field.webp" width="317" height="105" alt="TikTok 验证码输入格的局部截图" loading="lazy"></a><figcaption>⑤ 需要填数字时，点红框内的空格。图取自 iPhone 短信验证页，仅用于辨认输入格；本教程的邮箱验证码到邮箱里找。 <a href="https://note.com/poisha_official/n/nafe27a826f22">ポイシャ · iPhone 操作截图</a></figcaption></figure>
+<figure><a class="zoom" href="assets/tiktok-register/verify-email.webp" aria-label="放大查看：TikTok 验证邮件中的 Verify your email address 按钮"><img src="assets/tiktok-register/verify-email.webp" width="292" height="108" alt="TikTok 验证邮件中的 Verify your email address 按钮" loading="lazy"></a><figcaption>⑥ 收到按钮式邮件时，点粉色的 Verify your email address。 <a href="https://www.living50.com/hubfs/E-Book%20-%20Social%20Media%20What%20Is%20it%20All%20About%3F.pdf#page=35">Living50+ · TikTok 操作截图</a></figcaption></figure></div></article><article class="instruction"><h3><span>04</span>设置密码，确认注册完成</h3><p>出现 <strong>Create password（创建密码）</strong> 时，为 TikTok 单独设置一个符合屏幕要求的密码，保存在自己的密码管理器里。随后如需填写昵称或 @用户名，按提示完成；用户名已被占用时，换一个即可。</p>
+<p>回到右下角 <strong>Profile</strong>，能看到自己的 <strong>@用户名</strong> 和 <strong>Edit profile（编辑资料）</strong>，就已经进入账号。记下这个用户名，方便下次确认登录的是同一个账号。</p>
+<div class="screens"><figure><a class="zoom" href="assets/tiktok-register/new-password.webp" aria-label="放大查看：创建密码页面的密码框和 Next 按钮"><img src="assets/tiktok-register/new-password.webp" width="281" height="262" alt="创建密码页面的密码框和 Next 按钮" loading="lazy"></a><figcaption>⑦ 在 Enter password 填 TikTok 的新密码，达到页面要求后点 Next。 <a href="https://www.living50.com/hubfs/E-Book%20-%20Social%20Media%20What%20Is%20it%20All%20About%3F.pdf#page=35">Living50+ · TikTok 操作截图</a></figcaption></figure>
+<figure><a class="zoom" href="assets/tiktok-register/profile-done.webp" aria-label="放大查看：个人资料页显示用户名及编辑资料按钮"><img src="assets/tiktok-register/profile-done.webp" width="780" height="713" alt="个人资料页显示用户名及编辑资料按钮" loading="lazy"></a><figcaption>⑧ 这里应显示你自己的账号。红框中的日文按钮对应「编辑资料」。 <a href="https://news.mynavi.jp/article/20241018-3045141/">マイナビニュース · iPhone 操作截图</a></figcaption></figure></div></article></section>
+<section class="section" id="login"><h2>已有账号怎么登录</h2><p class="section-desc">下次打开 TikTok，选 Log in（登录），再选当初注册时使用的方式。</p><article class="instruction"><h3><span>01</span>用邮箱注册过</h3><p>在登录页选 <strong>Use phone / email / username（使用手机号、邮箱或用户名）</strong>，再点 <strong>Email / Username（邮箱 / 用户名）</strong>。输入注册邮箱或 @用户名，以及这个 TikTok 账号的密码。</p>
+<p>如果 App 要求验证，再按它显示的收件地址或验证方式操作。忘记 TikTok 密码时，点 <strong>Forgot password?（忘记密码？）</strong>，按提示用绑定的邮箱或手机号重设。<a class="inline-link" href="https://support.tiktok.com/en/log-in-troubleshoot/log-in/reset-password">TikTok 官方密码重设说明</a></p>
+<div class="screens"><figure><a class="zoom" href="assets/tiktok-register/login-email.webp" aria-label="放大查看：登录页显示 Email / Username、Password 和 Forgot password?"><img src="assets/tiktok-register/login-email.webp" width="420" height="428" alt="登录页显示 Email / Username、Password 和 Forgot password?" loading="lazy"></a><figcaption>这一页的标题是 Log in。输入框下方能找到 Forgot password?。 <a href="https://techcult.com/how-do-you-login-to-your-tiktok-account/">TechCult · TikTok 登录页截图</a></figcaption></figure></div></article><article class="instruction"><h3><span>02</span>用 Apple 或 Google 注册过</h3><p>选择原来的 <strong>Continue with Apple</strong> 或 <strong>Continue with Google</strong>，并选同一个 Apple 或 Google 账户。只是用 Gmail 地址填写了 TikTok 注册表的读者，仍走上面的邮箱登录。</p></article></section>
+<section class="section" id="risk"><h2>卡在哪一步，就看哪一条</h2><p class="section-desc">先看屏幕上的原文。验证码、邮箱占用和账号封禁，各有不同的处理入口。</p><article class="instruction"><h3><span>01</span>收不到验证码</h3><p>核对 TikTok 显示的邮箱和你打开的收件箱是否一致；在邮箱里搜索「TikTok」，也看看垃圾邮件、广告或推广分类。倒计时结束后可点 <strong>Resend code（重新发送）</strong>。收到多封时，使用最近一次请求对应的邮件。</p></article><article class="instruction"><h3><span>02</span>提示邮箱已经被使用</h3><p>如果这个邮箱以前注册过 TikTok，回到 <strong>Log in</strong> 登录原账号；忘记密码就走找回流程。创建另一个独立账号需要使用尚未绑定的邮箱。</p></article><article class="instruction"><h3><span>03</span>出现账号封禁通知</h3><p>打开 TikTok 的封禁通知，查看具体原因。如果认为处理有误，点通知中的 <strong>Appeal（申诉）</strong>，按提示提交说明。如果遇到的是年龄验证，按该通知提供的年龄申诉流程处理。<a class="inline-link" href="https://support.tiktok.com/en/safety-hc/account-and-user-safety/content-violations-and-bans">TikTok 官方封禁与申诉说明</a></p></article></section>
+<section class="section" id="iphone"><h2>还没装好 TikTok？</h2><p class="section-desc">已经安装并能打开 TikTok 的读者，可以直接从本文第一步开始。</p><p><a class="inline-link" href="/tiktok-iphone-setup">打开「如何设置 iPhone 上的 TikTok 使用环境」</a>，查看 App Store 下载与手机设置的实际操作图。</p></section>
 </main>
 
 <footer>
