@@ -15,7 +15,7 @@
 - 🛒 跨境电商平台：SHEIN、Temu、Amazon、阿里国际站、eBay、Etsy、Shopee、Lazada、Mercado Libre、Falabella、TikTok Shop、AliExpress
 - 🔎 搜索引擎&浏览器：Google、Chrome谷歌浏览器
 - 🤖 AI 工具：ChatGPT、Gemini、Claude、OpenClaw、Hermes Agent、即梦、HeyGen、ElevenLabs
-- 🧰 VPN 软件汇总：NekoBox、v2rayNG、v2rayN、Clash Verge、Clash Meta、ClashMi、FlClash、Clash Party
+- 🧰 vpn客户端汇总：NekoBox、v2rayNG、v2rayN、Clash Verge、Clash Meta、ClashMi、FlClash、Clash Party
 - 🧭 跨境基础服务：机场推荐、VPS 自建专线、住宅 IP 节点（IPRoyal、1024Proxy、LokiProxy）、IP 伪装度纯净度查询、指纹浏览器、紫鸟浏览器、Apple ID
 - 🧪 IP 检测工具：Whoer、IPinfo、ip-api、ping0.cc、Scamalytics、IPQualityScore / IPQS、IP2Location、IP2Proxy、IPPure
 - 🎬 跨境视频剪辑：CapCut
