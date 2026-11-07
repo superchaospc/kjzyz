@@ -365,11 +365,12 @@ nav.scrolled { border-bottom-color: var(--line); }
 
 .hero-actions {
   margin: 30px auto 0;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 780px;
+  align-items: stretch;
   justify-content: center;
   gap: 12px;
-  flex-wrap: wrap;
   opacity: 0;
   animation: fadeUp 0.7s ease 0.4s forwards;
 }
@@ -431,8 +432,8 @@ nav.scrolled { border-bottom-color: var(--line); }
 @media (max-width: 768px) {
   .hero { padding: 64px 20px 40px; }
   .hero h1 { letter-spacing: -0.025em; }
-  .hero-actions { margin-top: 24px; gap: 10px; }
-  .hero-action { width: 100%; max-width: 320px; }
+  .hero-actions { margin-top: 24px; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 580px; }
+  .hero-action { padding: 6px 10px; gap: 6px; white-space: normal; line-height: 1.35; }
 }
 
 /* ============ Section General ============ */
@@ -821,6 +822,10 @@ footer {
     <a href="youtube-guide.html" class="hero-action">
       <span class="hero-action-logo"><img src="assets/logos/youtube.svg" alt=""></span>
       如何注册 YouTube
+    </a>
+    <a href="gmail-guide.html" class="hero-action">
+      <span class="hero-action-logo"><img src="assets/logos/gmail.svg" alt=""></span>
+      如何注册 Gmail 邮箱
     </a>
     <a href="setup.html" class="hero-action">
       <span class="hero-action-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a13.5 13.5 0 010 18"/><path d="M12 3a13.5 13.5 0 000 18"/></svg></span>
