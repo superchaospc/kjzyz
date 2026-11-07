@@ -31,10 +31,14 @@
   figcaption { margin-top: 6px; font-size: 14px; color: var(--muted); }
   h3 { margin: 16px 0 4px; font-size: 18px; }
   aside { background: #f2f7fc; padding: 14px 18px; border-radius: 10px; font-size: 15px; }
+  .providers { margin-top: 30px; }
+  .provider-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+  .provider-links a { padding: 8px 20px; border: 1px solid var(--rule); border-radius: 8px; font-weight: 600; }
+  .provider-links a:hover, .provider-links a:focus-visible { background: #f2f7fc; }
   @media (max-width: 540px) {
     main { padding-inline: 20px; }
     li { padding-left: 0; }
-    h2 { padding-left: 36px; }
+    li h2 { padding-left: 36px; }
   }
 </style>
 </head>
@@ -47,6 +51,15 @@
     <h1>如何购买和使用 VPN 机场</h1>
     <p>“机场”是提供代理线路的服务商。你在机场网站购买套餐，再把线路导入手机或电脑上的客户端。各家的菜单名称不同，下面按实际操作顺序来讲。</p>
   </header>
+  <section class="providers" aria-labelledby="providers-title">
+    <h2 id="providers-title">选择一家机场</h2>
+    <p>点击名称进入注册页面。以下为推广链接，通过链接购买套餐，本站可能获得佣金。</p>
+    <div class="provider-links">
+      <a href="https://red.bnaffred.com/#/register?code=lz4hDF8t" target="_blank" rel="sponsored noopener">Bitz Net</a>
+      <a href="https://invite.dginv.click/#/register?code=hDsj8QMu" target="_blank" rel="sponsored noopener">狗狗加速</a>
+      <a href="https://tagss.pro/#/auth/ZPks0lvc" target="_blank" rel="sponsored noopener">TAG</a>
+    </div>
+  </section>
   <ol role="list">
     <li>
       <h2>注册机场账号</h2>
