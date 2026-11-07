@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>如何注册 YouTube — 跨境资源站 · kjzyz.com</title>
+<meta name="description" content="从申请 Gmail 邮箱、设置密码和验证身份，到用同一个 Google 账号登录 YouTube，每一步都有中文图文说明。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kjzyz.com/youtube-guide">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --accent: #0066cc;
+  --accent-hover: #0077ed;
+  --accent-tint: rgba(0, 102, 204, 0.06);
+  --accent-line: rgba(0, 102, 204, 0.18);
+  --ink: #1d1d1f;
+  --ink-soft: #424245;
+  --ink-mute: #6e6e73;
+  --ink-faint: #86868b;
+  --bg: #ffffff;
+  --bg-soft: #fbfbfd;
+  --bg-panel: #f5f5f7;
+  --line: rgba(0, 0, 0, 0.08);
+  --line-strong: rgba(0, 0, 0, 0.14);
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  --font-display: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', 'Inter', 'Microsoft YaHei', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+::selection { background: var(--accent); color: white; }
+a { color: inherit; text-decoration: none; }
+
+.top-bar {
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--line);
+}
+.top-bar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--ink-mute);
+}
+.top-bar-icon { display: inline-flex; opacity: 0.7; }
+.top-bar-icon svg { width: 13px; height: 13px; }
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+nav.scrolled { border-bottom-color: var(--line); }
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.logo {
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logo-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: inline-block;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  font-weight: 500;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.nav-link:hover { color: var(--accent); }
+.nav-link svg { width: 14px; height: 14px; }
+
+.hero {
+  padding: 84px 28px 40px;
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero-logo {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 24px;
+  border-radius: 18px;
+  background: white;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+.hero-logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-mute);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  margin-bottom: 18px;
+}
+.hero-sub {
+  max-width: 660px;
+  margin: 0 auto;
+  font-size: 17px;
+  color: var(--ink-mute);
+  line-height: 1.65;
+}
+
+.quick-nav {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 28px 44px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.quick-nav a {
+  padding: 8px 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  background: var(--bg-soft);
+  white-space: nowrap;
+}
+.quick-nav a:hover {
+  color: var(--accent);
+  border-color: var(--accent-line);
+  background: var(--accent-tint);
+}
+
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 28px 96px;
+}
+.section {
+  padding: 56px 0;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 78px;
+}
+.section:first-child { border-top: none; }
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.section h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 42px);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+.section-desc {
+  max-width: 720px;
+  color: var(--ink-mute);
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+.steps {
+  display: grid;
+  gap: 0;
+}
+.step {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 18px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+.step:last-child { border-bottom: none; }
+.step-num {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--bg-panel);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+}
+.step-body h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+.step-body p,
+.step-body li {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.75;
+}
+.step-body ul {
+  margin-top: 8px;
+  padding-left: 18px;
+}
+.step-body strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.inline-link {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.note-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 26px;
+}
+.note {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+.note h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+.note p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+.callout {
+  background: var(--accent-tint);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin-top: 26px;
+}
+.callout-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.callout p {
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.7;
+}
+footer {
+  padding: 48px 28px 40px;
+  border-top: 1px solid var(--line);
+  background: var(--bg);
+}
+.foot-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+}
+.foot-inner .logo {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 760px) {
+  .top-bar-inner { padding: 8px 18px; font-size: 11px; justify-content: flex-start; }
+  .nav-inner { padding: 0 18px; }
+  .nav-links { gap: 10px; }
+  .nav-link span { display: none; }
+  .hero { padding: 56px 20px 30px; }
+  .quick-nav { padding: 0 20px 30px; justify-content: center; flex-wrap: wrap; }
+  main { padding: 0 20px 72px; }
+  .section { padding: 42px 0; }
+  .step { grid-template-columns: 38px 1fr; gap: 12px; }
+  .note-grid { grid-template-columns: 1fr; }
+}
+
+.guide-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 350px); align-items: start; gap: 28px; margin-top: 12px; }
+.guide-row p + p { margin-top: 12px; }
+.guide-image img { display: block; width: 100%; height: auto; border: 1px solid var(--line-strong); border-radius: 12px; }
+.guide-image figcaption { color: var(--ink-mute); font-size: 13px; line-height: 1.6; margin-top: 8px; }
+.guide-image a { display: block; }
+.step-body { min-width: 0; }
+@media (max-width: 760px) {
+  .guide-row { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .guide-image { width: min(100%, 430px); margin: 0 auto; }
+  .step { grid-template-columns: 34px minmax(0, 1fr); gap: 10px; }
+  .step .guide-row { grid-column: 1 / -1; }
+  .step .small-heading { align-self: center; }
+  .step .small-heading h3 { margin-bottom: 0; }
+}
+@media (min-width: 761px) {
+  .step .guide-row { grid-column: 2; margin-top: -8px; }
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <span class="top-bar-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    </span>
+    <span>本页仅整理账号注册与登录常见流程，请遵守平台规则与所在地法律法规</span>
+  </div>
+</div>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>跨境资源站</a>
+    <div class="nav-links">
+      <a href="setup.html" aria-label="使用教程" class="nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <span>使用教程</span>
+      </a>
+      <a href="index.html" aria-label="返回首页" class="nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span>返回首页</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-logo">
+    <img src="assets/logos/youtube.svg" alt="YouTube">
+  </div>
+  <div class="hero-eyebrow">ACCOUNT GUIDE</div>
+  <h1>如何注册 YouTube</h1>
+  <p class="hero-sub">先申请一个 Gmail 邮箱，再用同一个 Google 账号登录 YouTube。已有 Gmail 的读者可以直接跳到最后一步。</p>
+</header>
+
+<div class="quick-nav" aria-label="页面导航"><a href="#register">申请 Gmail</a><a href="#verification">验证与收信</a><a href="#youtube">登录 YouTube</a></div>
+<main>
+<section class="section" id="register"><div class="section-label">Part 01</div><h2>申请 Gmail</h2><p class="section-desc">图中姓名、生日和地址仅供演示。注册时请填写自己的资料。</p><div class="steps">
+<div class="step"><span class="step-num">01</span><div class="step-body small-heading"><h3>打开 Google，点「创建账号」</h3></div><div class="guide-row"><div class="step-body">
+<p>用手机自带的浏览器或电脑浏览器，打开<a class="inline-link" href="https://accounts.google.com/signin?hl=zh-CN">Google 官方登录页</a>。第一次申请，邮箱输入框先留空，直接点图中红框里的<strong>「创建账号」</strong>。</p>
+<p>如果弹出用途菜单，选<strong>「个人用途」</strong>。如果已经看到「请输入您的姓名」，直接做下一步。</p>
+</div><figure class="guide-image"><a href="assets/youtube-guide/first.png" aria-label="查看大图：打开 Google，点「创建账号」"><img src="assets/youtube-guide/first.png" width="430" height="451" loading="lazy" alt="Google 登录页左下方的「创建账号」已用红框标出。"></a><figcaption>图 1 · Google 登录页左下方的「创建账号」已用红框标出。</figcaption></figure></div></div>
+<div class="step"><span class="step-num">02</span><div class="step-body small-heading"><h3>填自己的姓名</h3></div><div class="guide-row"><div class="step-body">
+<p>看到「创建 Google 账号」后，在<strong>「姓氏」</strong>一栏填姓，在<strong>「名字」</strong>一栏填名。例如叫林小安，上面填“林”，下面填“小安”。页面标为「选填」的栏可以留空。</p>
+<p>填好点<strong>「下一步」</strong>。邮箱地址稍后再选。</p>
+</div><figure class="guide-image"><a href="assets/youtube-guide/name.png" aria-label="查看大图：填自己的姓名"><img src="assets/youtube-guide/name.png" width="430" height="480" loading="lazy" alt="图中以「林小安」为例，姓和名分开填写。"></a><figcaption>图 2 · 图中以「林小安」为例，姓和名分开填写。</figcaption></figure></div></div>
+<div class="step"><span class="step-num">03</span><div class="step-body small-heading"><h3>填生日，选择性别</h3></div><div class="guide-row"><div class="step-body">
+<p>在「年」里输入四位出生年份，点「月」选择出生月份，再在「日」里输入日期。请按自己的实际生日填写。</p>
+<p>点开<strong>「性别」</strong>下拉框，选择合适的选项。想保留隐私，可以选「不愿透露」。然后点「下一步」。</p>
+</div><figure class="guide-image"><a href="assets/youtube-guide/birthday.png" aria-label="查看大图：填生日，选择性别"><img src="assets/youtube-guide/birthday.png" width="430" height="495" loading="lazy" alt="生日从左到右依次是年、月、日，月份点开后选择。"></a><figcaption>图 3 · 生日从左到右依次是年、月、日，月份点开后选择。</figcaption></figure></div></div>
+<div class="step"><span class="step-num">04</span><div class="step-body small-heading"><h3>选一个属于你的 Gmail 地址</h3></div><div class="guide-row"><div class="step-body">
+<p><strong>最简单的选法：</strong>点一个 Google 推荐的地址。左边的小圆圈变成蓝色，就表示选中了。把这一整行记下来，包括末尾的 <code>@gmail.com</code>，然后点「下一步」。</p>
+<p><strong>想自己取名：</strong>点「创建您自己的 Gmail 邮箱」。如果输入框右侧已经写着 <code>@gmail.com</code>，只填前面的名字，例如 <code>lintravelnotes</code>。提示已被使用，就换个名字或加几位数字。<a class="inline-link" href="https://support.google.com/mail/answer/9211434?hl=zh-Hans">查看用户名规则</a>。</p>
+<p>左下角的<strong>「使用现有邮箱」</strong>适合想用已有邮箱创建 Google 账号的人。这次要申请新的 Gmail，请选上面的圆圈。</p>
+</div><figure class="guide-image"><a href="assets/youtube-guide/address.png" aria-label="查看大图：选一个属于你的 Gmail 地址"><img src="assets/youtube-guide/address.png" width="430" height="510" loading="lazy" alt="图中选中了第一条推荐地址，右下角的红框是「下一步」。"></a><figcaption>图 4 · 图中选中了第一条推荐地址，右下角的红框是「下一步」。</figcaption></figure></div></div>
+<div class="step"><span class="step-num">05</span><div class="step-body small-heading"><h3>设置密码，两格填同一串</h3></div><div class="guide-row"><div class="step-body">
+<p>在第一格输入你为新邮箱设置的密码，使用字母、数字和符号组合。第二格「确认」里，把刚才的密码再输入一次。</p>
+<p>如果提示两次输入不一致，可以在自己的设备上勾选「显示密码」，检查大小写和符号。确认后点「下一步」，把邮箱地址和密码保存在自己的密码管理器里。</p>
+</div><figure class="guide-image"><a href="assets/youtube-guide/password.png" aria-label="查看大图：设置密码，两格填同一串"><img src="assets/youtube-guide/password.png" width="430" height="545" loading="lazy" alt="上面的「密码」和下面的「确认」都要填。"></a><figcaption>图 5 · 上面的「密码」和下面的「确认」都要填。</figcaption></figure></div></div>
+</div></section>
+<section class="section" id="verification"><div class="section-label">Part 02</div><h2>验证与收信</h2><p class="section-desc">验证方式由 Google 决定。下面两张示意图分别说明如何接收验证码、怎样确认新邮箱可以收发邮件。</p><div class="steps">
+<div class="step"><span class="step-num">06</span><div class="step-body small-heading"><h3>按提示验证身份，完成注册</h3></div><div class="guide-row"><div class="step-body">
+<p>Google 有时会要求确认你是真人。<strong>看到短信验证码页面</strong>，就按图操作。如果页面给出其他验证方式，按当页指引完成；如果直接进入下一页，就继续注册。</p>
+<p>没收到短信时，先核对国家代码和手机号，再等几分钟。如果页面还提供「接听电话」，也可以用电话接收验证码。<a class="inline-link" href="https://support.google.com/accounts/answer/114129?hl=zh-Hans">Google 验证问题帮助</a>。</p>
+<p>接下来按页面提示核对账号信息，阅读条款后，如同意就点相应按钮完成注册。看到「辅助邮箱」时，可以填一个你已经在用、能收信的邮箱，方便以后找回账号。</p>
+</div><figure class="guide-image"><a href="assets/youtube-guide/verify.png" aria-label="查看大图：按提示验证身份，完成注册"><img src="assets/youtube-guide/verify.png" width="860" height="1148" loading="lazy" alt="流程示意：这张图适用于页面要求接收短信验证码的情况。"></a><figcaption>图 6 · 流程示意：这张图适用于页面要求接收短信验证码的情况。</figcaption></figure></div></div>
+<div class="step"><span class="step-num">07</span><div class="step-body small-heading"><h3>打开收件箱，试发第一封邮件</h3></div><div class="guide-row"><div class="step-body">
+<p>打开<a class="inline-link" href="https://mail.google.com/">Gmail 收件箱</a>。如果出现账号列表，选择刚注册的地址；如果要求登录，就输入刚记下的完整邮箱地址和密码。</p>
+<p>进入邮箱后，电脑上点左上方的<strong>「写邮件」</strong>，Gmail 手机应用里点<strong>铅笔图标</strong>。收件人填你自己常用的另一个邮箱，主题写“测试邮件”，正文写一句话，再点「发送」。</p>
+<p>打开旧邮箱，找到这封邮件并回复。回到 Gmail，看见回信，就说明新邮箱已经可以正常收发。</p>
+</div><figure class="guide-image"><a href="assets/youtube-guide/inbox.png" aria-label="查看大图：打开收件箱，试发第一封邮件"><img src="assets/youtube-guide/inbox.png" width="860" height="1200" loading="lazy" alt="操作示意：用新邮箱发信，再用旧邮箱回信。"></a><figcaption>图 7 · 操作示意：用新邮箱发信，再用旧邮箱回信。</figcaption></figure></div></div>
+</div></section>
+<section class="section" id="youtube">
+  <div class="section-label">Part 03</div><h2>登录 YouTube</h2>
+  <div class="step"><span class="step-num">08</span><div class="step-body small-heading"><h3>选择刚注册的 Google 账号</h3></div><div class="guide-row"><div class="step-body">
+  <p>打开 <a class="inline-link" href="https://www.youtube.com/">YouTube 官网</a>，点右上角的「登录」（英文界面显示为 <strong>Sign in</strong>）。如果页面列出了你的新 Gmail 地址，直接选它。如果列表里只有其他账号，选「使用其他账号」，输入你的完整 Gmail 地址，点「下一步」，再输入密码。</p>
+  <p>回到 YouTube 后，点头像查看当前账号。确认邮箱地址正确，就可以订阅喜欢的频道了。</p></div><figure class="guide-image"><img src="assets/youtube-guide/youtube.png" width="420" height="105" alt="YouTube 网页右上角，红圈内为 Sign in 登录按钮"><figcaption>图 8 · 红圈里的 Sign in 就是「登录」。</figcaption></figure></div></div>
+</section></main>
+<footer>
+  <div class="foot-inner">
+    <div class="logo"><span class="logo-dot"></span>跨境资源站</div>
+    <div>© 2026 KJZYZ.COM · ACCOUNT GUIDE</div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 8);
+});
+</script>
+
+</body>
+</html>
