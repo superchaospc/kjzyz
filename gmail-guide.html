@@ -374,6 +374,8 @@ footer {
 @media (min-width: 761px) {
   .step .guide-row { grid-column: 2; margin-top: -8px; }
 }
+.guide-image img.store-account-shot { width: auto; max-width: 100%; height: 290px; margin-inline: auto; }
+.app-entry { margin-top: 28px; }
 </style>
 </head>
 <body>
@@ -415,14 +417,45 @@ footer {
   </aside>
 </header>
 
-<div class="quick-nav" aria-label="页面导航"><a href="#register">申请 Gmail</a><a href="#verification">完成验证</a><a href="#inbox">收发第一封邮件</a></div>
+<div class="quick-nav" aria-label="页面导航"><a href="#iphone">iPhone App 注册</a><a href="#register">申请 Gmail</a><a href="#verification">完成验证</a><a href="#inbox">收发第一封邮件</a></div>
 <main>
+<section class="section" id="iphone">
+  <h2>用 iPhone App 注册</h2>
+  <div class="guide-row">
+    <div class="step-body">
+      <h3>1. 登录美区 App Store，下载 Gmail</h3>
+      <p>打开 iPhone 上的 App Store，点右上角头像，用自己的<strong>美区 Apple ID</strong> 登录商店。如果要切换账号，只在 App Store 的账户页操作，保留手机当前的 iCloud 登录。还没有美区 ID，可以先看站内教程《<a class="inline-link" href="/shadowrocket-apple-id">如何购买苹果美区 ID 和小火箭</a>》。</p>
+      <p>登录后，打开<a class="inline-link" href="https://apps.apple.com/us/app/gmail-email-by-google/id422689480">Gmail 的美区 App Store 页面</a>，点「获取」（Get）或云朵图标，按提示确认下载。按钮变成「打开」后，就可以启动 App。</p>
+      <p>在中国大陆按本教程注册，请先在这台 iPhone 上安装并开启 VPN。还没配好可以看《<a class="inline-link" href="/airport-guide">如何购买和使用 VPN 机场</a>》。</p>
+    </div>
+    <figure class="guide-image">
+      <a href="assets/tiktok-iphone-setup/store-account.webp"><img class="store-account-shot" src="assets/tiktok-iphone-setup/store-account.webp" width="595" height="1280" loading="lazy" alt="App Store 首页截图，箭头标出右上角的账户头像"></a>
+      <figcaption>点右上角头像进入 App Store 账户页。点图可放大。</figcaption>
+    </figure>
+  </div>
+  <div class="guide-row app-entry">
+    <div class="step-body">
+      <h3>2. 在 Gmail 里打开注册入口</h3>
+      <p>首次打开 Gmail，点「登录」，在邮箱服务商列表里选「Google」。如果已经看到了收件箱，点右上角头像，选「添加其他账号」，再选「Google」。</p>
+    </div>
+    <figure class="guide-image">
+      <a href="assets/guides/gmail-iphone-entry.svg"><img src="assets/guides/gmail-iphone-entry.svg" width="380" height="310" loading="lazy" alt="登录，或点右上角头像，添加账号时选择 Google，创建账号 → 个人用途"></a>
+      <figcaption>Gmail 操作路径示意。不同版本的按钮文字可能略有差异。</figcaption>
+    </figure>
+  </div>
+  <div class="step-body app-entry">
+    <h3>3. 填写资料，回到 App 确认账号</h3>
+    <p>进入 Google 登录页后，点「创建账号」，为自己注册时选「个人用途」。按提示填写姓名和生日，选择 Gmail 地址、设置密码，再完成页面要求的验证。可以对照下方的<a class="inline-link" href="#account-details">账号填写图解</a>。如果 App 中没有创建入口，可在 Safari 打开<a class="inline-link" href="https://accounts.google.com/signup">Google 官方注册页</a>，注册后回 App 选择新账号。</p>
+    <p>回到 Gmail，点右上角头像确认新的 @gmail.com 地址，再打开收件箱。</p>
+  </div>
+</section>
+
 <section class="section" id="register"><div class="section-label">Part 01</div><h2>申请你的 Gmail 地址</h2><p class="section-desc">图中姓名、生日和地址仅供演示。注册时请填写自己的资料。</p><div class="steps">
 <div class="step"><span class="step-num">01</span><div class="step-body small-heading"><h3>打开 Google，点「创建账号」</h3></div><div class="guide-row"><div class="step-body">
 <p>用手机自带的浏览器或电脑浏览器，打开<a class="inline-link" href="https://accounts.google.com/signin?hl=zh-CN">Google 官方登录页</a>。第一次申请，邮箱输入框先留空，直接点图中红框里的<strong>「创建账号」</strong>。</p>
 <p>如果弹出用途菜单，选<strong>「个人用途」</strong>。如果已经看到「请输入您的姓名」，直接做下一步。</p>
 </div><figure class="guide-image"><a href="assets/youtube-guide/first.png" aria-label="查看大图：打开 Google，点「创建账号」"><img src="assets/youtube-guide/first.png" width="430" height="451" loading="lazy" alt="Google 登录页左下方的「创建账号」已用红框标出。"></a><figcaption>图 1 · Google 登录页左下方的「创建账号」已用红框标出。</figcaption></figure></div></div>
-<div class="step"><span class="step-num">02</span><div class="step-body small-heading"><h3>填自己的姓名</h3></div><div class="guide-row"><div class="step-body">
+<div class="step" id="account-details" style="scroll-margin-top:78px"><span class="step-num">02</span><div class="step-body small-heading"><h3>填自己的姓名</h3></div><div class="guide-row"><div class="step-body">
 <p>看到「创建 Google 账号」后，在<strong>「姓氏」</strong>一栏填姓，在<strong>「名字」</strong>一栏填名。例如叫林小安，上面填“林”，下面填“小安”。页面标为「选填」的栏可以留空。</p>
 <p>填好点<strong>「下一步」</strong>。邮箱地址稍后再选。</p>
 </div><figure class="guide-image"><a href="assets/youtube-guide/name.png" aria-label="查看大图：填自己的姓名"><img src="assets/youtube-guide/name.png" width="430" height="480" loading="lazy" alt="图中以「林小安」为例，姓和名分开填写。"></a><figcaption>图 2 · 图中以「林小安」为例，姓和名分开填写。</figcaption></figure></div></div>
