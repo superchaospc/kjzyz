@@ -47,15 +47,16 @@
     { "@type": "ListItem", "position": 4, "name": "vpn客户端汇总" },
     { "@type": "ListItem", "position": 5, "name": "美区 Apple ID & 其他国家 Apple ID" },
     { "@type": "ListItem", "position": 6, "name": "安卓手机跨境APP应用商店" },
-    { "@type": "ListItem", "position": 7, "name": "住宅 IP 节点" },
-    { "@type": "ListItem", "position": 8, "name": "跨境社媒" },
-    { "@type": "ListItem", "position": 9, "name": "跨境邮箱" },
-    { "@type": "ListItem", "position": 10, "name": "搜索引擎&浏览器" },
-    { "@type": "ListItem", "position": 11, "name": "IP 伪装度 / 纯净度查询" },
-    { "@type": "ListItem", "position": 12, "name": "指纹浏览器" },
-    { "@type": "ListItem", "position": 13, "name": "跨境视频剪辑" },
-    { "@type": "ListItem", "position": 14, "name": "跨境电商平台" },
-    { "@type": "ListItem", "position": 15, "name": "跨境收款" }
+    { "@type": "ListItem", "position": 7, "name": "第三方打赏页" },
+    { "@type": "ListItem", "position": 8, "name": "住宅 IP 节点" },
+    { "@type": "ListItem", "position": 9, "name": "跨境社媒" },
+    { "@type": "ListItem", "position": 10, "name": "跨境邮箱" },
+    { "@type": "ListItem", "position": 11, "name": "搜索引擎&浏览器" },
+    { "@type": "ListItem", "position": 12, "name": "IP 伪装度 / 纯净度查询" },
+    { "@type": "ListItem", "position": 13, "name": "指纹浏览器" },
+    { "@type": "ListItem", "position": 14, "name": "跨境视频剪辑" },
+    { "@type": "ListItem", "position": 15, "name": "跨境电商平台" },
+    { "@type": "ListItem", "position": 16, "name": "跨境收款" }
   ]
 }
 </script>
@@ -1535,6 +1536,22 @@ const PRODUCTS = [
     logoUrl: 'assets/logos/apkpure.png',
     scenes: ['android-app-store'], isTool: true,
     affiliateUrl: 'https://apkpure.com/'
+  },
+
+  // ============ 第三方打赏页 ============
+  {
+    id: 'ko-fi', symbol: 'Kf', name: 'Ko-fi', slogan: '创作者打赏',
+    description: '创建个人打赏页，接受粉丝打赏或会员订阅',
+    color: '#326b9a', logoUrl: 'assets/logos/ko-fi.png',
+    scenes: ['creator-tips'], isTool: true,
+    affiliateUrl: 'https://ko-fi.com/'
+  },
+  {
+    id: 'buy-me-a-coffee', symbol: 'Bc', name: 'Buy Me a Coffee', slogan: '咖啡打赏',
+    description: '让粉丝用「请喝咖啡」的方式打赏并留言',
+    color: '#594611', logoUrl: 'assets/logos/buy-me-a-coffee.png',
+    scenes: ['creator-tips'], isTool: true,
+    affiliateUrl: 'https://buymeacoffee.com/'
   }
 ];
 
@@ -1569,6 +1586,11 @@ const GROUPS = [
     id: 'android-app-store',
     title: '安卓手机跨境APP应用商店',
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6"/><path d="M9 17h6"/><path d="M9 11l2 2 4-4"/></svg>'
+  },
+  {
+    id: 'creator-tips',
+    title: '第三方打赏页',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h14v5a6 6 0 0 1-6 6H9a6 6 0 0 1-6-6zM17 9h2a3 3 0 0 1 0 6h-2M2 22h18M6 3v2m4-2v2m4-2v2"/></svg>'
   },
   {
     id: 'residential',
