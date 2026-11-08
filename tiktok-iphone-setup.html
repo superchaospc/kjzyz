@@ -154,6 +154,17 @@ nav.scrolled { border-bottom-color: var(--line); }
   line-height: 1.65;
 }
 
+.market-settings {
+  width: 100%;
+  max-width: 660px;
+  margin: 16px auto 0;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: clamp(13px, 2.6vw, 16px);
+}
+.market-settings th, .market-settings td { padding: 9px 6px; border-bottom: 1px solid var(--line); }
+.market-settings thead { background: var(--bg-panel); }
+
 .sim-reminder {
   display: inline-block;
   margin: 4px 0 14px;
@@ -415,7 +426,15 @@ footer {
 <h1>如何设置 iPhone 上的 TikTok 使用环境</h1>
 <p class="hero-sub"><strong>如果准备长期运营 TikTok，本站建议直接用 iPhone，不推荐用安卓手机作为运营主机。</strong></p>
 <p class="sim-reminder"><strong>准备一台空闲的 iPhone，全程不要插 SIM 卡。</strong></p>
-<p class="hero-sub">以美国洛杉矶为例，从手机还原出厂、安装应用，到扫码连接线路。</p></header>
+<p class="hero-sub" id="market-settings"><strong>运营哪个国家或地区的 TikTok 账号，就按当地设置 iPhone 的地区、时区和 VPN 节点。</strong>下文以美国洛杉矶为例，其他市场按同样的方法选择。</p>
+<table class="market-settings" aria-labelledby="market-settings">
+  <thead><tr><th scope="col">运营市场</th><th scope="col">iPhone 地区</th><th scope="col">时区城市</th><th scope="col">VPN 节点</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">美国（示例）</th><td>美国</td><td>洛杉矶</td><td>美国洛杉矶</td></tr>
+    <tr><th scope="row">日本</th><td>日本</td><td>东京</td><td>日本节点</td></tr>
+    <tr><th scope="row">迪拜</th><td>阿联酋（UAE）</td><td>迪拜</td><td>迪拜节点</td></tr>
+  </tbody>
+</table></header>
 <div class="glance" aria-label="文章目录"><a href="#reset">空机准备与还原</a><a href="#region">地区与时区</a><a href="#apple-id">美区 ID</a><a href="#apps">下载应用</a><a href="#network">扫码连接</a><a href="#check">检查出口</a></div><main>
 <section class="section" id="reset"><div class="section-label">步骤 01</div><h2>先取出 SIM 卡，再还原 iPhone</h2>
 <div class="walk"><p>拿出准备用于 TikTok 的备用 iPhone。如果卡槽里有实体 SIM 卡，先把卡取出来。从还原出厂到以后使用 TikTok，都让卡槽保持空置，只连 Wi-Fi。需要收短信验证码时，把卡放在另一台手机上。</p>
