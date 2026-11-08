@@ -1,70 +1,34 @@
-# 🌐 跨境资源站
+# 跨境资源站 · kjzyz.com
 
-[![Website](https://img.shields.io/badge/Website-kjzyz.com-0066cc?style=flat-square)](https://kjzyz.com/)
-[![GitHub](https://img.shields.io/badge/GitHub-superchaospc%2Fkjzyz-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/superchaospc/kjzyz)
-[![Deploy](https://img.shields.io/badge/Deploy-Cloudflare%20Pages-F38020?style=flat-square&logo=cloudflare&logoColor=white)](https://pages.cloudflare.com/)
-[![Static HTML](https://img.shields.io/badge/Static-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](./index.html)
+面向跨境电商从业者和出海创作者的中文工具导航与图文教程。首页按用途整理 AI 工具、海外社媒、邮箱、视频剪辑、网络服务、电商平台和跨境收款工具。[访问跨境资源站](https://kjzyz.com/)
 
-`kjzyz.com` 是一个面向跨境业务和海外工具使用场景的静态导航页，集中整理跨境社媒、邮箱、跨境收款、跨境电商平台、搜索引擎、AI 工具、跨境视频剪辑、VPN 软件客户端、机场、VPS、住宅 IP、IP 伪装度纯净度查询、指纹浏览器和 Apple ID 相关资源。
+## 图文指南
 
-## ✨ 项目内容
+| 想做什么 | 从这里开始 |
+| --- | --- |
+| 注册邮箱 | [Gmail 注册指南](./gmail-guide.html) · [Outlook 注册指南](./outlook-guide.html) |
+| 准备 iPhone 并注册 TikTok | [iPhone 设置图解](./tiktok-iphone-setup.html) · [TikTok 注册与登录](./tiktok-guide.html) |
+| 开通 YouTube 或 WhatsApp | [YouTube 注册指南](./youtube-guide.html) · [WhatsApp 注册指南](./whatsapp-guide.html) |
+| 配置网络客户端 | [使用教程](./setup.html) · [VPN 机场购买与使用](./airport-guide.html) · [美区 Apple ID 与 Shadowrocket](./shadowrocket-apple-id.html) |
+| 给社媒主页加打赏链接 | [Ko-fi 与 Buy Me a Coffee 注册及分享指南](./creator-tips-guide.html) |
 
-- 📱 跨境社媒：TikTok、Instagram、Facebook、WhatsApp、YouTube、LinkedIn、X
-- 📮 跨境邮箱：Gmail、Outlook
-- 💳 跨境收款：派安盈、西联支付、PayPal、Stripe、XTransfer、Wise
-- 🛒 跨境电商平台：SHEIN、Temu、Amazon、阿里国际站、eBay、Etsy、Shopee、Lazada、Mercado Libre、Falabella、TikTok Shop、AliExpress
-- 🔎 搜索引擎&浏览器：Google、Chrome谷歌浏览器
-- 🤖 AI 工具：ChatGPT、Gemini、Claude、OpenClaw、Hermes Agent、即梦、HeyGen、ElevenLabs
-- 🧰 vpn客户端汇总：NekoBox、v2rayNG、v2rayN、Clash Verge、Clash Meta、ClashMi、FlClash、Clash Party
-- 🧭 跨境基础服务：机场推荐、VPS 自建专线、住宅 IP 节点（IPRoyal、1024Proxy、LokiProxy）、IP 伪装度纯净度查询、指纹浏览器、紫鸟浏览器、Apple ID
-- 🧪 IP 检测工具：Whoer、IPinfo、ip-api、ping0.cc、Scamalytics、IPQualityScore / IPQS、IP2Location、IP2Proxy、IPPure
-- 🎬 跨境视频剪辑：CapCut
+## 本地预览与测试
 
-## 📁 文件结构
+在仓库根目录运行静态服务器，然后在浏览器打开 <http://localhost:8000/index.html>。预览单篇教程时使用上表中的 HTML 文件名。
 
-```text
-.
-├── assets/       # 本地工具 Logo
-├── index.html   # 主站页面
-├── setup.html   # 备用/说明页面
-├── tiktok-guide.html # TikTok 账号注册与登录指南
-├── whatsapp-guide.html # WhatsApp 注册指南
-├── robots.txt
-├── sitemap.xml
-├── _headers     # Cloudflare Pages 响应头
-├── wrangler.toml
-└── README.md
+```sh
+python3 -m http.server 8000
 ```
 
-## 🚀 本地预览
+使用 Node.js 运行首页资源卡片测试。
 
-这是一个纯静态网页，不需要安装依赖。
-
-直接用浏览器打开：
-
-```text
-index.html
+```sh
+node --test tests/*.test.mjs
 ```
 
-也可以使用任意静态服务器预览。
+## 内容维护与部署
 
-## ☁️ 部署
-
-当前项目通过 GitHub 仓库连接 Cloudflare Pages 自动部署：
-
-1. 修改 `index.html`
-2. 提交并推送到 GitHub `main` 分支
-3. Cloudflare Pages 自动触发构建并更新线上网站
-
-Cloudflare Pages 构建设置：
-
-```text
-Framework preset: None
-Build command: 留空
-Build output directory: /
-Root directory: /
-```
-
-## ⚠️ 说明
-
-本站内容仅供学习研究、跨境电商运营、海外业务推广等合法用途参考。请遵守所在地法律法规，不得用于任何违法活动。
+- 首页分类和资源卡片在 `index.html`，各篇教程是根目录下的独立 HTML 文件。截图与标识存放在 `assets/`。
+- 新增公开教程时，在首页添加入口，并更新 `sitemap.xml`。修改已有教程时，同步更新站点地图中的修改日期。
+- Cloudflare Pages 使用 `main` 分支，构建命令留空，直接发布仓库根目录。`wrangler.toml` 中的 `pages_build_output_dir` 为 `.`。
+- `_headers` 定义响应头。`functions/_middleware.js` 将 www 域名重定向至主域名，并为已下架的 AI 订阅攻略返回 HTTP 410。要在本地验证这些 Pages 行为，可在根目录运行 `npx wrangler pages dev .`。
