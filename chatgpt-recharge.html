@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>如何充值 ChatGPT · 跨境资源站</title>
-<meta name="description" content="了解如何在 ChatGPT 官网开通会员，并查看四个第三方充值网站及付款注意事项。">
+<meta name="description" content="图解如何在闲鱼购买美区 Apple 礼品卡、兑换到 iPhone 的美区 Apple ID，再用账户余额在 ChatGPT iOS App 中订阅 Plus。">
 <link rel="canonical" href="https://kjzyz.com/chatgpt-recharge">
 <style>
   * { box-sizing: border-box; }
@@ -20,6 +20,11 @@
   h1 { font-size: clamp(32px, 5vw, 52px); letter-spacing: -.04em; }
   h2 { font-size: clamp(22px, 3vw, 28px); }
   section { margin-top: 36px; }
+  .steps > li { margin: 24px 0 32px; }
+  .steps h3 { margin: 0; font-size: 20px; }
+  .steps figure { margin: 14px 0 0; }
+  .steps img { display: block; max-width: 100%; height: auto; border-radius: 12px; }
+  .steps figcaption { margin-top: 8px; color: #50545a; font-size: 14px; }
   p { margin: 10px 0; }
   ol, .sites { padding-left: 1.6em; }
   li { padding-left: .3em; margin-block: .45em; }
@@ -38,13 +43,42 @@
     <p>通常说的「给 ChatGPT 充值」，是给自己的账号开通或续订 Plus 等会员。会员订阅和开发者 API 余额分开计费。</p>
   </header>
   <section aria-labelledby="official">
-    <h2 id="official">在 ChatGPT 官网开通会员</h2>
-    <ol>
-      <li>打开 <a href="https://chatgpt.com/">ChatGPT 官网</a>，登录准备开通会员的账号，先核对账户邮箱。</li>
-      <li>点击头像，选择「升级套餐」（Upgrade Plan），再选需要的套餐。在结账页确认金额、计费周期和下次扣款日期，然后付款。</li>
-      <li>付款后，用同一账号进入「设置 → 账户」，查看订阅状态。以后需要查看账单或取消续订，也可以从这里管理。</li>
+    <h2 id="official">用美区 Apple 礼品卡在 iPhone 上订阅 ChatGPT Plus</h2>
+    <p>付款前先确认你所在的地区可以使用 ChatGPT。中国大陆目前未列入 <a href="https://help.openai.com/en/articles/7947663-chatgpt-supported-countries">OpenAI 支持的地区</a>。以下步骤适用于身处支持地区、使用自己美区 Apple ID 的读者。</p>
+    <ol class="steps">
+      <li>
+        <h3>在闲鱼 App 购买美国 Apple 礼品卡</h3>
+        <p>打开闲鱼，搜索「美区 Apple 礼品卡」。下单前确认商品标明美国区（US）、面值以美元（USD）计算，并能在美国 App Store 兑换。购买后，从订单或站内聊天中取得兑换码。</p>
+        <figure>
+          <img src="assets/guides/xianyu-us-gift.webp" width="520" height="346" alt="闲鱼购买示意图，搜索美区 Apple 礼品卡，核对美国区、美元面值和兑换码。">
+          <figcaption>闲鱼搜索与商品核对示意图。</figcaption>
+        </figure>
+      </li>
+      <li>
+        <h3>把兑换码存入自己的美区 Apple ID</h3>
+        <p>在 iPhone 打开 <strong>App Store</strong>，点右上角头像，确认当前登录的是你准备用来付款的美区 Apple ID。点「兑换代码」（Redeem Gift Card or Code），选择手动输入，粘贴闲鱼收到的代码并确认。返回账户页，查看美元余额是否已增加。</p>
+        <figure>
+          <img src="assets/guides/apple-us-redeem.webp" width="295" height="608" loading="lazy" alt="Apple 的 iPhone 截图，App Store 账户页底部高亮显示「兑换代码」。">
+          <figcaption>截图中放大的「兑换代码」就是入口。<a href="https://support.apple.com/zh-cn/118242">Apple 官方兑换说明</a></figcaption>
+        </figure>
+      </li>
+      <li>
+        <h3>在 ChatGPT iOS App 选择 Plus</h3>
+        <p>打开 OpenAI 发布的 ChatGPT App，登录要开通会员的 <strong>ChatGPT 账号</strong>。打开侧栏，点自己的名字进入设置，选择「升级套餐」（Upgrade），再选 Plus。若同时提供网页结账和 Apple 内购，选择 Apple 内购，才能使用刚兑换的余额。</p>
+        <figure>
+          <img src="assets/guides/chatgpt-ios-upgrade.webp" width="420" height="379" loading="lazy" alt="ChatGPT iOS 设置截图，Subscription 下方有 Upgrade to ChatGPT Plus 入口。">
+          <figcaption>图中入口为「Upgrade to ChatGPT Plus」，不同版本的按钮文字可能略有差异。<a href="https://help.openai.com/en/articles/7905739-chatgpt-ios-app-upgrading-to-a-paid-subscription">OpenAI 的 iOS 订阅说明</a></figcaption>
+        </figure>
+      </li>
+      <li>
+        <h3>用美区 Apple 账户余额确认订阅</h3>
+        <p>Apple 弹出订阅确认框后，核对套餐、金额和续费周期，并确认余额足以支付结账总额。按 iPhone 提示确认购买，完成后回到 ChatGPT 查看 Plus 状态。以后要查看续费日期或取消订阅，打开 iPhone「设置 → 你的姓名 → 订阅 → ChatGPT」。</p>
+        <figure>
+          <img src="assets/guides/chatgpt-apple-confirm.webp" width="520" height="302" loading="lazy" alt="Apple 内购确认示意图，核对 ChatGPT Plus、价格和续费周期后确认订阅。">
+          <figcaption>付款确认示意图。部分购买即使使用余额，Apple 也可能要求账户登记有效付款方式。<a href="https://support.apple.com/zh-cn/118242">Apple 账户余额说明</a></figcaption>
+        </figure>
+      </li>
     </ol>
-    <p><a href="https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus">查看 OpenAI 的 Plus 订阅说明</a></p>
   </section>
   <section aria-labelledby="providers">
     <h2 id="providers">第三方 ChatGPT 充值网站</h2>
