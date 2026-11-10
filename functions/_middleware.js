@@ -14,6 +14,18 @@ async function serve(context) {
     });
   }
 
+  // The previous deployment published these files. Older edge caches may still hold them.
+  const path = url.pathname.replace(/%([a-f0-9]{2})/gi, (_, hex) =>
+    String.fromCharCode(parseInt(hex, 16))
+  );
+  if (/^\/(?:README\.md|wrangler\.toml|\.gitignore|tests|functions)(?:\/|$)/i.test(path)) {
+    const page = await context.env.ASSETS.fetch(new URL("/404.html", url));
+    return new Response(context.request.method === "HEAD" ? null : page.body, {
+      status: 404,
+      headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" },
+    });
+  }
+
   return context.next();
 }
 
