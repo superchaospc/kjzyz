@@ -1,4 +1,4 @@
-export async function onRequest(context) {
+async function serve(context) {
   const url = new URL(context.request.url);
 
   if (url.hostname === "www.kjzyz.com") {
@@ -15,4 +15,23 @@ export async function onRequest(context) {
   }
 
   return context.next();
+}
+
+export async function onRequest(context) {
+  const original = await serve(context);
+  const response = new Response(original.body, original);
+  response.headers.set("Strict-Transport-Security", "max-age=2592000");
+  response.headers.set("Content-Security-Policy", "frame-ancestors 'none'");
+  response.headers.set("Content-Security-Policy-Report-Only", [
+    "default-src 'self'",
+    "script-src 'self' https://static.cloudflareinsights.com",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+    "font-src 'self' https://fonts.gstatic.com",
+    "img-src 'self' data: https://cdn.simpleicons.org",
+    "connect-src 'self' https://cloudflareinsights.com",
+    "object-src 'none'",
+    "base-uri 'self'",
+    "report-uri /csp-report",
+  ].join("; "));
+  return response;
 }
