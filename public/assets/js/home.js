@@ -6,7 +6,7 @@
    - scenes: 用于筛选的分类标签
 */
 const PRODUCTS = [
-  // ============ 机场（4 个 affiliate）============
+  // ============ 机场（5 个 affiliate）============
   {
     id: 'bitznet', symbol: 'Bz', name: 'Bitz Net', slogan: '稳定抗封',
     description: '行业老牌，别家都封了它还稳稳在线',
@@ -22,6 +22,14 @@ const PRODUCTS = [
     customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="9" r="1.6" fill="white"/><circle cx="17" cy="9" r="1.6" fill="white"/><path d="M5 15c1.5 2.2 4 3.5 7 3.5s5.5-1.3 7-3.5"/><circle cx="12" cy="13.5" r="1.2" fill="white"/></svg>',
     recommended: false, badge: 'BEST VALUE',
     affiliateUrl: 'https://invite.dginv.click/#/register?code=hDsj8QMu'
+  },
+  {
+    id: 'bygcloud', symbol: '白', name: '白月光', slogan: 'BGP 多线接入',
+    description: '提供 BGP 多线接入和专线组网服务',
+    color: '#1d1d1f', scenes: ['airport'],
+    logoUrl: 'assets/logos/bygcloud.png',
+    recommended: false, badge: null,
+    affiliateUrl: 'https://www.sibker.com/register?invite_code=NcJjAMaC'
   },
   {
     id: 'ykkcloud', symbol: 'Y', name: 'YKKCLOUD', slogan: '按流量选套餐',
