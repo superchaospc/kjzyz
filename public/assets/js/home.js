@@ -656,6 +656,15 @@ const PRODUCTS = [
     affiliateUrl: 'https://www.capcut.com/'
   },
 
+  // ============ 油管调研工具 ============
+  {
+    id: 'vidiq', symbol: 'IQ', name: 'vidIQ',
+    description: 'YouTube 频道分析工具，支持关键词调研和竞品对比',
+    color: '#139dff', scenes: ['youtube-research'],
+    logoUrl: 'assets/logos/vidiq.svg', logoWide: true, logoBg: '#171b24',
+    affiliateUrl: 'https://vidiq.com/kjzyz'
+  },
+
   // ============ 免费工具 · 安卓手机跨境APP应用商店 ============
   {
     id: 'apkpure', symbol: 'Ap', name: 'APKPure', slogan: '安卓应用商店',
@@ -754,6 +763,11 @@ const GROUPS = [
     id: 'video-editing',
     title: '跨境视频剪辑',
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3V9z"/><path d="M7 3v4"/><path d="M17 3v4"/><path d="M7 17v4"/><path d="M17 17v4"/></svg>'
+  },
+  {
+    id: 'youtube-research',
+    title: '油管调研工具',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 16l5-6 4 3 5-7"/></svg>'
   },
   {
     id: 'ecommerce',
