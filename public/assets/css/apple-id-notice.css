@@ -1,0 +1,19 @@
+/* Shared notice beside third-party Apple ID purchase references. */
+.apple-id-notice {
+  box-sizing: border-box;
+  display: block;
+  margin: 16px 0;
+  padding: 16px 18px;
+  border: 1px solid #e7c9aa;
+  border-left: 4px solid #a34b16;
+  border-radius: 10px;
+  background: #fff8ef;
+  color: #473b30;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: normal;
+  overflow-wrap: anywhere;
+}
+.apple-id-notice strong { color: #913d13; font-weight: 650; }
+.apple-id-notice .apple-id-notice-title { display: block; margin-bottom: 5px; font-size: 16px; }

@@ -257,18 +257,18 @@ const PRODUCTS = [
     affiliateUrl: 'https://www.superbrowser.com/'
   },
 
-  // ============ 美区 Apple ID & 其他国家 Apple ID（2 个 affiliate）============
+  // ============ 美区 Apple ID & 其他国家 Apple ID（2 个独立第三方网站）============
   {
     id: 'kxsw', symbol: 'Kx', name: 'KX Store', slogan: '美区 Apple ID & 其他国家 Apple ID',
-    description: '多国家 Apple ID 即买即用，下载海外独占应用',
+    description: '独立第三方 Apple ID 网站，购买及售后请联系该站客服',
     color: '#1d1d1f', scenes: ['appleid'],
     customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="13" rx="1" fill="white"/><path d="M4 11h16" stroke="#e63946"/><path d="M12 8V21" stroke="#e63946"/><path d="M8 8c0-2.2 1.8-4 4-4s4 1.8 4 4"/></svg>',
-    recommended: true, badge: 'INSTANT DELIVERY',
+    recommended: false, badge: null,
     affiliateUrl: 'https://store.kxsw.org/'
   },
   {
     id: 'reegifts', symbol: 'Re', name: 'ReeGifts', slogan: '礼品卡 & Apple ID',
-    description: '美区礼品卡与账号一站购齐，自动发货',
+    description: '独立第三方礼品卡与 Apple ID 网站，购买及售后请联系该站客服',
     color: '#1d1d1f', scenes: ['appleid'],
     customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 21 4 21 4 12" fill="white"/><rect x="2" y="7" width="20" height="5" rx="0.5" fill="white"/><line x1="12" y1="21" x2="12" y2="7" stroke="#ff6b35"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z" fill="white"/></svg>',
     recommended: false, badge: null,
@@ -716,6 +716,7 @@ const GROUPS = [
   },
   {
     id: 'appleid',
+    notice: `<aside class="apple-id-notice" aria-label="第三方购买说明"><strong class="apple-id-notice-title">第三方购买说明</strong>本站（kjzyz.com）与这两个 Apple ID 销售网站<strong>没有任何合作关系</strong>，仅分享此前个人成功购买过的两个网址，不代表对后续交易或账号可用性的保证。购买、付款、发货、账号使用及退款等问题，请<strong>直接联系购买网站客服</strong>，本站不提供销售或售后服务。</aside>`,
     title: '美区 Apple ID & 其他国家 Apple ID',
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5L19 19a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2z"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>'
   },
@@ -870,6 +871,7 @@ function renderGroups() {
           <span class="group-icon">${g.icon}</span>
           <span class="group-title">${g.title}</span>
         </div>
+        ${g.notice || ''}
         <div class="products">
           ${items.map(renderCard).join('')}
         </div>
