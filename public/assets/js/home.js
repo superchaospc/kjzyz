@@ -726,7 +726,6 @@ const GROUPS = [
   },
   {
     id: 'appleid',
-    notice: `<aside class="apple-id-notice" aria-label="第三方购买说明"><strong class="apple-id-notice-title">第三方购买说明</strong>本站（kjzyz.com）与这两个 Apple ID 销售网站<strong>没有任何合作关系</strong>，仅分享此前个人成功购买过的两个网址，不代表对后续交易或账号可用性的保证。购买、付款、发货、账号使用及退款等问题，请<strong>直接联系购买网站客服</strong>，本站不提供销售或售后服务。</aside>`,
     title: '美区 Apple ID & 其他国家 Apple ID',
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5L19 19a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2z"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>'
   },
