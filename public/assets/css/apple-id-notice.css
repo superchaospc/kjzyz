@@ -1,5 +1,5 @@
-/* Shared notice beside third-party Apple ID purchase references. */
-.apple-id-notice {
+/* Shared styles for third-party purchase and service notices. */
+.apple-id-notice, .airport-notice {
   box-sizing: border-box;
   display: block;
   margin: 16px 0;
@@ -15,5 +15,5 @@
   letter-spacing: normal;
   overflow-wrap: anywhere;
 }
-.apple-id-notice strong { color: #913d13; font-weight: 650; }
-.apple-id-notice .apple-id-notice-title { display: block; margin-bottom: 5px; font-size: 16px; }
+.apple-id-notice strong, .airport-notice strong { color: #913d13; font-weight: 650; }
+.apple-id-notice .apple-id-notice-title, .airport-notice .notice-title { display: block; margin-bottom: 5px; font-size: 16px; }

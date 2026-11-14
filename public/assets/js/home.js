@@ -710,6 +710,7 @@ const GROUPS = [
   },
   {
     id: 'airport',
+    notice: `<div class="airport-notice" role="note" aria-label="机场服务免责声明"><strong class="notice-title">免责声明</strong>以下机场均由第三方独立运营，本站仅提供信息与链接，<strong>不参与运营或售后，不保证服务持续可用</strong>。套餐、付款、线路及退款问题，请<strong>直接联系对应机场客服</strong>。请遵守所在地法律法规，仅用于合法用途。</div>`,
     title: 'VPN机场推荐',
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>'
   },
