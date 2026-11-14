@@ -9,7 +9,7 @@
 | 注册邮箱 | [Gmail 注册指南](./public/gmail-guide.html) · [Outlook 注册指南](./public/outlook-guide.html) |
 | 准备 iPhone 并注册 TikTok | [iPhone 设置图解](./public/tiktok-iphone-setup.html) · [TikTok 注册与登录](./public/tiktok-guide.html) |
 | 开通 YouTube 或 WhatsApp | [YouTube 注册指南](./public/youtube-guide.html) · [WhatsApp 注册指南](./public/whatsapp-guide.html) |
-| 配置网络客户端 | [使用教程](./public/setup.html) · [VPN 机场购买与使用](./public/airport-guide.html) · [美区 Apple ID 与 Shadowrocket（KX Store、ReeGifts）](./public/shadowrocket-apple-id.html) |
+| 配置网络客户端 | [使用教程](./public/setup.html) · [VPN 机场购买与使用](./public/airport-guide.html) · [美区 Apple ID 与 Shadowrocket（ReeGifts、KX Store）](./public/shadowrocket-apple-id.html) |
 | 给 TikTok、Instagram、YouTube 主页加打赏链接 | [Ko-fi 与 Buy Me a Coffee 注册及分享指南](./public/creator-tips-guide.html) |
 
 ## 本地预览与测试
