@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>如何使用 ElevenLabs：克隆声音与生成配音 · 跨境资源站</title>
-<meta name="description" content="ElevenLabs 中文入门教程：即时克隆、专业克隆、使用声音库，以及用 Text to Speech 输入文案、生成和下载配音。附 Starter、Creator 套餐价格与付款说明。">
+<meta name="description" content="ElevenLabs 中文图文教程，配真实操作界面截图：即时克隆、专业克隆、使用声音库，以及用 Text to Speech 输入文案、生成和下载配音。附套餐价格与付款说明。">
 <link rel="canonical" href="https://kjzyz.com/elevenlabs-guide">
 <style>
   * { box-sizing: border-box; }
@@ -41,6 +41,11 @@
   th, td { padding: 13px 12px; border-bottom: 1px solid #dce2e8; vertical-align: top; }
   th { background: #f2f6f9; font-weight: 600; }
   .source { font-size: 14px; color: #656b73; }
+  .screenshot { margin: 22px 0; }
+  .screenshot > a { display: block; cursor: zoom-in; }
+  .screenshot img { display: block; width: 100%; height: auto; border: 1px solid #dce2e8; border-radius: 12px; }
+  .screenshot figcaption { margin-top: 9px; font-size: 14px; line-height: 1.7; color: #50545a; }
+  .screenshot.compact { max-width: 586px; }
   .flow { font-weight: 600; line-height: 2; }
   footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e4e7eb; color: #656b73; font-size: 14px; }
   @media (max-width: 600px) { .nav-inner { padding-inline: 20px; } main { padding-inline: 20px; } th, td { padding: 10px; } }
@@ -56,6 +61,7 @@
     <p>想让 AI 用自己的声音读稿，或者给视频配上自然的旁白，可以用 ElevenLabs。先选好声音，再把文案放进 <strong>Text to Speech（文字转语音）</strong>，就能生成配音并下载到电脑。</p>
     <p>声音有三种准备方式：<strong>即时克隆自己的声音、专业克隆自己的声音，以及使用声音库里的现成声音。</strong>下面从套餐选择开始，一步步走到配音导出。</p>
     <p class="meta">更新于 <time datetime="2026-11-15">2026 年 11 月 15 日</time> · 以网页端操作为例</p>
+    <p class="source">配图采用 ElevenLabs 官方教程中的真实操作界面截图，点击图片可放大查看。不同版本的布局可能略有变化，按图中的英文功能名称寻找即可。</p>
     <nav class="contents" aria-label="文章目录"><a href="#plans">套餐与费用</a><a href="#instant">即时克隆</a><a href="#professional">专业克隆</a><a href="#library">使用声音库</a><a href="#generate">生成与下载配音</a><a href="#payment">付款说明</a></nav>
   </header>
 
@@ -91,6 +97,10 @@
       <li>进入 <strong>My Voices（我的声音）</strong>，找到刚保存的声音，点击 <strong>Use voice（使用声音）</strong>。</li>
     </ol>
     <p>保存声音后，还需要输入文案才能得到配音。接着看下方的<a href="#generate">「生成与下载配音」</a>。</p>
+    <figure class="screenshot">
+      <a href="assets/guides/elevenlabs/instant-clone.webp" target="_blank" rel="noopener" aria-label="放大即时克隆声音信息与保存界面"><img src="assets/guides/elevenlabs/instant-clone.webp" width="1600" height="900" loading="lazy" alt="Instant Voice Clone 实际界面，填写 Name，勾选声音授权确认，右下角点击 Save voice 保存声音。"></a>
+      <figcaption>图 1 · 上传录音后的声音信息页：在 <strong>Name</strong> 填名称，勾选下方授权确认，再点右下角 <strong>Save voice</strong>。<a href="https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/instant-voice-cloning">图片来源：官方即时克隆教程</a></figcaption>
+    </figure>
     <p class="source"><a href="https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/instant-voice-cloning">即时克隆官方教程</a></p>
   </section>
 
@@ -98,6 +108,10 @@
     <h2 id="professional-title">方式二：专业克隆自己的声音</h2>
     <p><strong>最低套餐：Creator，首月优惠 $11，之后 $22／月。</strong>适合长期制作视频、课程或有声内容，对本人音色的还原要求更高的人。</p>
     <p>至少准备 <strong>30 分钟</strong>的本人说话录音，想获得更好的效果，建议准备 <strong>2～3 小时</strong>。尽量使用同一套设备，保持环境、距离和说话方式一致。素材中只保留自己的声音，避免背景音乐、明显噪声和回声。</p>
+    <figure class="screenshot">
+      <a href="assets/guides/elevenlabs/professional-upload.webp" target="_blank" rel="noopener" aria-label="放大专业克隆上传录音界面"><img src="assets/guides/elevenlabs/professional-upload.webp" width="1600" height="900" loading="lazy" alt="Professional Voice Clone 实际界面，左侧填写声音名称和录音语言，右侧有 Upload samples 上传素材与 Record yourself 录音按钮。"></a>
+      <figcaption>图 2 · 左侧填写声音名称和录音语言；右侧点 <strong>Upload samples</strong> 上传录音，或点 <strong>Record yourself</strong> 直接录制。<a href="https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/professional-voice-cloning">图片来源：官方专业克隆教程</a></figcaption>
+    </figure>
     <ol>
       <li>进入 <strong>Voices → ＋ → Professional Voice Clone（专业声音克隆）</strong>。</li>
       <li>创建声音，上传录音素材，查看系统对时长和质量的反馈。</li>
@@ -106,6 +120,10 @@
       <li>训练完成后，找到自己的声音，点击 <strong>Use（使用）</strong>，继续<a href="#generate">生成配音</a>。</li>
     </ol>
     <p>专业克隆需要训练，不是上传后马上就能使用。最终相似度受素材质量影响，干净、稳定的录音比堆积大量杂乱素材更有帮助。</p>
+    <figure class="screenshot">
+      <a href="assets/guides/elevenlabs/professional-samples.webp" target="_blank" rel="noopener" aria-label="放大专业克隆素材列表与时长检查界面"><img src="assets/guides/elevenlabs/professional-samples.webp" width="1600" height="900" loading="lazy" alt="专业克隆上传后的素材列表，右上方显示录音总时长与质量参考，右下角有 Next 按钮。"></a>
+      <figcaption>图 3 · 上传后检查右侧素材列表与总时长，再按 <strong>Next</strong> 继续。图中的 13 分钟只是官方演示进度，准备素材仍按至少 30 分钟、建议 2～3 小时执行。<a href="https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/professional-voice-cloning">图片来源：官方专业克隆教程</a></figcaption>
+    </figure>
     <p class="source"><a href="https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/professional-voice-cloning">专业克隆官方教程</a></p>
   </section>
 
@@ -119,6 +137,10 @@
       <li>选中后直接使用，或保存到 <strong>My Voices</strong>，方便下次继续选择。</li>
     </ol>
     <p>部分声音只对付费账号开放。如果看到 <strong>2×</strong> 等积分倍率，代表使用该声音会消耗更多积分，生成前留意页面提示。</p>
+    <figure class="screenshot">
+      <a href="assets/guides/elevenlabs/voice-library.webp" target="_blank" rel="noopener" aria-label="放大声音库搜索与筛选界面"><img src="assets/guides/elevenlabs/voice-library.webp" width="1600" height="900" loading="lazy" alt="Voices 声音库的 Explore 页面，包含搜索框、Language 语言筛选、Narration 旁白分类和声音列表。"></a>
+      <figcaption>图 4 · 在 <strong>Explore</strong> 浏览声音，点 <strong>Language</strong> 筛语言，点 <strong>Narration</strong> 找旁白，也可以在搜索框直接搜声音名称。<a href="https://elevenlabs.io/docs/eleven-creative/voices/voice-library">图片来源：官方声音库教程</a></figcaption>
+    </figure>
     <p class="source"><a href="https://elevenlabs.io/docs/eleven-creative/voices/voice-library">声音库官方说明</a></p>
   </section>
 
@@ -135,18 +157,34 @@
         <h3>粘贴要朗读的文案</h3>
         <p>把配音稿放进文本框。想要中文配音就输入中文，想要英文配音就先准备好英文稿。<strong>这里是朗读文字，不会自动把中文稿翻译成英文。</strong></p>
         <p>建议先粘贴两三句话测试。例如：「大家好，欢迎来到我的频道。今天带你一起看看，如何用 AI 制作视频配音。」</p>
+        <figure class="screenshot">
+          <a href="assets/guides/elevenlabs/text-to-speech.webp" target="_blank" rel="noopener" aria-label="放大 Text to Speech 文案输入与生成界面"><img src="assets/guides/elevenlabs/text-to-speech.webp" width="1600" height="900" loading="lazy" alt="Text to Speech 实际界面，左边是配音文案输入区域，右边设置 Voice 和 Model，下方黑色按钮为 Generate speech，右上角有 History。"></a>
+          <figcaption>图 5 · 左侧输入文案，右侧选择 <strong>Voice</strong> 和 <strong>Model</strong>，下方黑色按钮是 <strong>Generate speech</strong>。右上角的 <strong>History</strong> 是历史记录入口。<a href="https://elevenlabs.io/docs/eleven-creative/playground/text-to-speech">图片来源：官方文字转语音教程</a></figcaption>
+        </figure>
       </li>
       <li>
         <h3>选择由哪个声音来读</h3>
         <p>点击当前声音的名称或声音选择框。在 <strong>My Voices</strong> 中选自己的克隆声音，或者选择刚才在声音库里找到的声音。确认选中的名称正确。</p>
+        <figure class="screenshot">
+          <a href="assets/guides/elevenlabs/voice-selection.webp" target="_blank" rel="noopener" aria-label="放大配音声音选择面板"><img src="assets/guides/elevenlabs/voice-selection.webp" width="1600" height="900" loading="lazy" alt="Select a voice 实际面板，顶部可以搜索声音，下方有最近使用、声音库、Professional 和 Default 分类。"></a>
+          <figcaption>图 6 · 点当前声音后打开 <strong>Select a voice</strong>。可直接搜索声音名称，也可从分类里选择。<a href="https://elevenlabs.io/docs/eleven-creative/playground/text-to-speech">图片来源：官方文字转语音教程</a></figcaption>
+        </figure>
       </li>
       <li>
         <h3>选择模型，先用默认设置测试</h3>
         <p>在 <strong>Model（模型）</strong> 中选择当前声音可用、并支持目标语言的模型。第一次使用可以先保留默认设置；需要调整语速、稳定性等参数时，再根据试听结果逐项修改。不同模型提供的设置可能不同。</p>
+        <figure class="screenshot">
+          <a href="assets/guides/elevenlabs/model-selection.webp" target="_blank" rel="noopener" aria-label="放大配音模型选择面板"><img src="assets/guides/elevenlabs/model-selection.webp" width="1600" height="900" loading="lazy" alt="Select a model 实际面板，列出 Eleven Multilingual v2 和 Eleven Flash v2.5，并显示各模型支持的语言。"></a>
+          <figcaption>图 7 · 在 <strong>Select a model</strong> 中查看模型和支持语言。截图展示的是官方示例中的 v2 和 v2.5，实际可选模型以你的账号当前页面为准。<a href="https://elevenlabs.io/docs/eleven-creative/playground/text-to-speech">图片来源：官方文字转语音教程</a></figcaption>
+        </figure>
       </li>
       <li>
         <h3>点击 Generate speech</h3>
         <p>点击 <strong>Generate speech（生成语音）</strong>，等待音频生成。生成会使用账号积分，先看清页面显示的消耗量和剩余额度，再提交较长文案。</p>
+        <figure class="screenshot compact">
+          <a href="assets/guides/elevenlabs/generate-button.webp" target="_blank" rel="noopener" aria-label="放大 Generate speech 按钮与文本字数提示"><img src="assets/guides/elevenlabs/generate-button.webp" width="586" height="110" loading="lazy" alt="左侧已选 My Voice - PVC 声音，右侧显示 116 / 5000 文本字数提示和黑色 Generate speech 按钮。"></a>
+          <figcaption>图 8 · 左侧是选中的声音，右侧黑色按钮为 <strong>Generate speech</strong>。旁边的 <strong>116 / 5000</strong> 是示例文本字数与上限，不是套餐余额。<a href="https://elevenlabs.io/docs/eleven-creative/playground/text-to-speech">图片来源：官方文字转语音教程</a></figcaption>
+        </figure>
       </li>
       <li>
         <h3>试听并调整</h3>
@@ -154,8 +192,8 @@
       </li>
       <li>
         <h3>下载配音，导入剪辑软件</h3>
-        <p>满意后点击音频旁的<strong>下载图标</strong>，选择 <strong>MP3</strong> 或 <strong>WAV</strong>。MP3 文件较小，便于发送；WAV 适合导入剪映、Final Cut Pro 等软件继续剪辑。下载为 WAV 不会把原本的音频自动变成更高质量。</p>
-        <p>如果没有立即下载，可以到 <strong>History（历史记录）</strong> 找到之前生成的音频，再点击下载。</p>
+        <p>满意后点击音频旁的<strong>下载图标</strong>，可以直接保存 MP3。需要 WAV 时，点击图 5 右上角的 <strong>History（历史记录）</strong>，找到对应音频，点该条记录的下载图标，再选择 <strong>WAV</strong>。窄屏界面可能用时钟样式的图标表示历史记录。</p>
+        <p>MP3 文件较小，便于发送；WAV 适合导入剪映、Final Cut Pro 等软件继续剪辑。下载为 WAV 不会把原本的音频自动变成更高质量。之前没有下载的配音，也可以在 History 里重新找到。</p>
       </li>
     </ol>
     <p class="source">界面按钮名称可能随版本调整，以当前页面为准。<a href="https://elevenlabs.io/docs/eleven-creative/playground/text-to-speech">Text to Speech 官方操作与下载说明</a></p>
