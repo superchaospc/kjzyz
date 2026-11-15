@@ -21,6 +21,9 @@
   .eyebrow, .meta { color: #656b73; font-size: 14px; }
   .eyebrow { display: flex; align-items: center; gap: 9px; margin-bottom: 14px; }
   .eyebrow img { width: 25px; height: 25px; object-fit: contain; }
+  .intro-cta { margin: 24px 0; }
+  .affiliate-button { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; gap: 10px; padding: 11px 24px; border: 1px solid #0066bc; border-radius: 10px; background: #0066bc; color: #fff; text-decoration: none; font-size: 17px; font-weight: 650; }
+  .affiliate-button:hover { background: #00549b; border-color: #00549b; }
   h1, h2 { line-height: 1.35; margin: 0; }
   h1 { font-size: clamp(31px, 5vw, 48px); letter-spacing: -.035em; }
   h2 { font-size: clamp(23px, 3vw, 28px); }
@@ -48,7 +51,7 @@
   .screenshot.compact { max-width: 586px; }
   .flow { font-weight: 600; line-height: 2; }
   footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e4e7eb; color: #656b73; font-size: 14px; }
-  @media (max-width: 600px) { .nav-inner { padding-inline: 20px; } main { padding-inline: 20px; } th, td { padding: 10px; } }
+  @media (max-width: 600px) { .nav-inner { padding-inline: 20px; } main { padding-inline: 20px; } th, td { padding: 10px; } .affiliate-button { width: 100%; } }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
@@ -60,6 +63,7 @@
     <h1>如何使用 ElevenLabs</h1>
     <p>想让 AI 用自己的声音读稿，或者给视频配上自然的旁白，可以用 ElevenLabs。先选好声音，再把文案放进 <strong>Text to Speech（文字转语音）</strong>，就能生成配音并下载到电脑。</p>
     <p>声音有三种准备方式：<strong>即时克隆自己的声音、专业克隆自己的声音，以及使用声音库里的现成声音。</strong>下面从套餐选择开始，一步步走到配音导出。</p>
+    <div class="intro-cta"><a class="affiliate-button" href="https://try.elevenlabs.io/x4mk50twfpyl" target="_blank" rel="sponsored noopener">前往 ElevenLabs 官网 <span aria-hidden="true">↗</span></a></div>
     <p class="meta">更新于 <time datetime="2026-11-15">2026 年 11 月 15 日</time> · 以网页端操作为例</p>
     <p class="source">配图采用 ElevenLabs 官方教程中的真实操作界面截图，点击图片可放大查看。不同版本的布局可能略有变化，按图中的英文功能名称寻找即可。</p>
     <nav class="contents" aria-label="文章目录"><a href="#plans">套餐与费用</a><a href="#instant">即时克隆</a><a href="#professional">专业克隆</a><a href="#library">使用声音库</a><a href="#generate">生成与下载配音</a><a href="#payment">付款说明</a></nav>
