@@ -671,7 +671,7 @@ const PRODUCTS = [
     description: 'YouTube 频道分析工具，支持关键词调研和竞品对比',
     color: '#139dff', scenes: ['youtube-research'],
     logoUrl: 'assets/logos/vidiq.svg', logoWide: true, logoBg: '#171b24',
-    affiliateUrl: 'https://vidiq.com/kjzyz'
+    affiliateUrl: 'https://vidiq.com/'
   },
 
   // ============ 免费工具 · 安卓手机跨境APP应用商店 ============
