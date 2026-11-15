@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>如何使用 ElevenLabs：克隆声音与生成配音 · 跨境资源站</title>
+<meta name="description" content="ElevenLabs 中文入门教程：即时克隆、专业克隆、使用声音库，以及用 Text to Speech 输入文案、生成和下载配音。附 Starter、Creator 套餐价格与付款说明。">
+<link rel="canonical" href="https://kjzyz.com/elevenlabs-guide">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; color: #1d1d1f; background: #fff; font: 17px/1.8 -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+  a { color: #0066bc; text-underline-offset: 4px; }
+  a:focus-visible { outline: 2px solid #0066bc; outline-offset: 4px; }
+  .site-nav { border-bottom: 1px solid #dce2e8; }
+  .nav-inner { max-width: 1140px; margin: auto; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .site-nav a { text-decoration: none; font-size: 14px; }
+  .site-nav .brand { color: #1d1d1f; font-size: 17px; font-weight: 650; }
+  .brand::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 8px; background: #0066cc; border-radius: 50%; }
+  main { max-width: 830px; margin: auto; padding: clamp(36px, 6vw, 68px) 22px 64px; }
+  .eyebrow, .meta { color: #656b73; font-size: 14px; }
+  .eyebrow { display: flex; align-items: center; gap: 9px; margin-bottom: 14px; }
+  .eyebrow img { width: 25px; height: 25px; object-fit: contain; }
+  h1, h2 { line-height: 1.35; margin: 0; }
+  h1 { font-size: clamp(31px, 5vw, 48px); letter-spacing: -.035em; }
+  h2 { font-size: clamp(23px, 3vw, 28px); }
+  h3 { font-size: 20px; line-height: 1.5; margin: 22px 0 7px; }
+  p { margin: 12px 0; }
+  section { margin-top: 40px; padding-top: 30px; border-top: 1px solid #e4e7eb; scroll-margin-top: 20px; }
+  ol, ul { padding-left: 1.5em; }
+  li { padding-left: .25em; margin-block: .6em; }
+  .steps > li { margin: 22px 0; }
+  .steps h3 { margin: 0; }
+  .steps p { margin: 6px 0; }
+  .contents { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 22px; font-size: 15px; }
+  aside { border-left: 3px solid #476782; padding: 12px 16px; background: #f2f6f9; margin: 20px 0; }
+  aside p { margin: 0; }
+  .table-wrap { overflow-x: auto; margin: 20px 0 12px; }
+  table { width: 100%; min-width: 570px; border-collapse: collapse; font-size: 15px; text-align: left; }
+  caption { text-align: left; font-weight: 600; margin-bottom: 10px; }
+  th, td { padding: 13px 12px; border-bottom: 1px solid #dce2e8; vertical-align: top; }
+  th { background: #f2f6f9; font-weight: 600; }
+  .source { font-size: 14px; color: #656b73; }
+  .flow { font-weight: 600; line-height: 2; }
+  footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e4e7eb; color: #656b73; font-size: 14px; }
+  @media (max-width: 600px) { .nav-inner { padding-inline: 20px; } main { padding-inline: 20px; } th, td { padding: 10px; } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="网站导航"><div class="nav-inner"><a class="brand" href="/">跨境资源站</a><a href="/">返回首页</a></div></nav>
+<main><article>
+  <header>
+    <div class="eyebrow"><img src="assets/logos/elevenlabs.png" alt="">AI 配音入门</div>
+    <h1>如何使用 ElevenLabs</h1>
+    <p>想让 AI 用自己的声音读稿，或者给视频配上自然的旁白，可以用 ElevenLabs。先选好声音，再把文案放进 <strong>Text to Speech（文字转语音）</strong>，就能生成配音并下载到电脑。</p>
+    <p>声音有三种准备方式：<strong>即时克隆自己的声音、专业克隆自己的声音，以及使用声音库里的现成声音。</strong>下面从套餐选择开始，一步步走到配音导出。</p>
+    <p class="meta">更新于 <time datetime="2026-11-15">2026 年 11 月 15 日</time> · 以网页端操作为例</p>
+    <nav class="contents" aria-label="文章目录"><a href="#plans">套餐与费用</a><a href="#instant">即时克隆</a><a href="#professional">专业克隆</a><a href="#library">使用声音库</a><a href="#generate">生成与下载配音</a><a href="#payment">付款说明</a></nav>
+  </header>
+
+  <section id="plans" aria-labelledby="plans-title">
+    <h2 id="plans-title">先注册账号，再按需求选套餐</h2>
+    <p>打开 <a href="https://try.elevenlabs.io/x4mk50twfpyl" rel="sponsored">ElevenLabs 官网</a>，点击 <strong>Sign up（注册）</strong>创建账号。登录后先确定是否需要克隆本人声音，再进入订阅页面选择套餐。</p>
+    <div class="table-wrap" role="region" aria-label="套餐价格对比，窄屏可左右滑动" tabindex="0">
+      <table>
+        <caption>官网月付价格，美元计价，未含税</caption>
+        <thead><tr><th scope="col">套餐</th><th scope="col">价格</th><th scope="col">每月积分</th><th scope="col">适合做什么</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Free 免费版</th><td>$0</td><td>10,000</td><td>体验部分现成声音，非商业用途</td></tr>
+          <tr><th scope="row">Starter 入门版</th><td>$6／月</td><td>30,000</td><td>即时克隆、使用现成声音做商业配音</td></tr>
+          <tr><th scope="row">Creator 创作者版</th><td>首月优惠 $11<br>之后 $22／月</td><td>121,000</td><td>专业克隆，也包含即时克隆功能</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>这些是<strong>按月订阅费用，不是无限量配音</strong>。生成音频会消耗积分，消耗量取决于文本、模型和所选声音；不要把积分直接理解成固定的配音分钟数。若额度不够，再按实际用量升级。</p>
+    <p>Starter 页面还展示过首月 $1 的活动，但活动日期与当前日期存在出入，本文按常规月费列出。首月优惠、税费和最终扣款金额，以自己账号的结账页面为准。</p>
+    <p class="source">价格核对：2026-11-15 · <a href="https://elevenlabs.io/pricing">官方套餐与积分说明</a></p>
+    <aside><p><strong>用于变现视频、广告或其他商业内容：</strong>至少选择 Starter。免费版生成的内容仅限非商业用途；正式制作时，应在有效付费订阅期间生成音频。<a href="https://elevenlabs.io/docs/help-center/legal/can-i-publish-the-content-i-generate-on-the-platform">官方商业使用说明</a></p></aside>
+  </section>
+
+  <section id="instant" aria-labelledby="instant-title">
+    <h2 id="instant-title">方式一：即时克隆自己的声音</h2>
+    <p><strong>最低套餐：Starter，$6／月。</strong>适合想快速试用本人音色、先看看克隆效果的人。</p>
+    <p>准备 <strong>1～2 分钟</strong>自己的说话录音。找安静的房间，用自然语气朗读，保持音量和距离稳定，避免音乐、回声和其他人说话。即时克隆并不是录得越长越好，官方不建议为了提升效果而上传超过 3 分钟的素材。</p>
+    <ol>
+      <li>点击左侧 <strong>Voices（声音）</strong>，再点击 <strong>＋</strong>。</li>
+      <li>选择 <strong>Instant Voice Clone（即时声音克隆）</strong>。</li>
+      <li>上传录音，或按页面提示直接录制。</li>
+      <li>给声音命名，确认声音使用授权，点击 <strong>Save voice（保存声音）</strong>。</li>
+      <li>进入 <strong>My Voices（我的声音）</strong>，找到刚保存的声音，点击 <strong>Use voice（使用声音）</strong>。</li>
+    </ol>
+    <p>保存声音后，还需要输入文案才能得到配音。接着看下方的<a href="#generate">「生成与下载配音」</a>。</p>
+    <p class="source"><a href="https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/instant-voice-cloning">即时克隆官方教程</a></p>
+  </section>
+
+  <section id="professional" aria-labelledby="professional-title">
+    <h2 id="professional-title">方式二：专业克隆自己的声音</h2>
+    <p><strong>最低套餐：Creator，首月优惠 $11，之后 $22／月。</strong>适合长期制作视频、课程或有声内容，对本人音色的还原要求更高的人。</p>
+    <p>至少准备 <strong>30 分钟</strong>的本人说话录音，想获得更好的效果，建议准备 <strong>2～3 小时</strong>。尽量使用同一套设备，保持环境、距离和说话方式一致。素材中只保留自己的声音，避免背景音乐、明显噪声和回声。</p>
+    <ol>
+      <li>进入 <strong>Voices → ＋ → Professional Voice Clone（专业声音克隆）</strong>。</li>
+      <li>创建声音，上传录音素材，查看系统对时长和质量的反馈。</li>
+      <li>按页面提示完成<strong>本人声音验证</strong>，尽量使用与素材录制时相近的设备和语气。</li>
+      <li>提交训练，在 <strong>My Voices</strong> 中查看进度，等待完成通知。</li>
+      <li>训练完成后，找到自己的声音，点击 <strong>Use（使用）</strong>，继续<a href="#generate">生成配音</a>。</li>
+    </ol>
+    <p>专业克隆需要训练，不是上传后马上就能使用。最终相似度受素材质量影响，干净、稳定的录音比堆积大量杂乱素材更有帮助。</p>
+    <p class="source"><a href="https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/professional-voice-cloning">专业克隆官方教程</a></p>
+  </section>
+
+  <section id="library" aria-labelledby="library-title">
+    <h2 id="library-title">方式三：使用声音库里的现成声音</h2>
+    <p>不想录音，或者需要不同语言、口音和角色的配音，可以直接挑选声音库。<strong>免费版可体验部分声音；用于商业内容，至少选择 Starter，$6／月。</strong></p>
+    <ol>
+      <li>点击左侧 <strong>Voices → Explore（探索）</strong>，进入声音库。</li>
+      <li>按语言、口音、性别和用途筛选。例如英文解说，可以先筛选 English，再选择美式或英式口音和 Narration（旁白）。</li>
+      <li>点击试听，听听声音是否适合自己的内容。</li>
+      <li>选中后直接使用，或保存到 <strong>My Voices</strong>，方便下次继续选择。</li>
+    </ol>
+    <p>部分声音只对付费账号开放。如果看到 <strong>2×</strong> 等积分倍率，代表使用该声音会消耗更多积分，生成前留意页面提示。</p>
+    <p class="source"><a href="https://elevenlabs.io/docs/eleven-creative/voices/voice-library">声音库官方说明</a></p>
+  </section>
+
+  <section id="generate" aria-labelledby="generate-title">
+    <h2 id="generate-title">选好声音后：用 Text to Speech 生成配音</h2>
+    <p><strong>克隆或挑选声音，是决定「谁来读」；Text to Speech，是让这个声音读出你的文案。</strong>上面三种方式准备好的声音，最后都可以在这里生成配音。</p>
+    <aside><p class="flow">Text to Speech → 粘贴文案 → 选择声音 → 选择模型 → Generate speech → 试听 → 下载</p></aside>
+    <ol class="steps">
+      <li>
+        <h3>打开 Text to Speech</h3>
+        <p>在左侧菜单点击 <strong>Text to Speech（文字转语音）</strong>。如果界面按产品分组，先进入语音创作区域或 Playground，再找到这个功能。</p>
+      </li>
+      <li>
+        <h3>粘贴要朗读的文案</h3>
+        <p>把配音稿放进文本框。想要中文配音就输入中文，想要英文配音就先准备好英文稿。<strong>这里是朗读文字，不会自动把中文稿翻译成英文。</strong></p>
+        <p>建议先粘贴两三句话测试。例如：「大家好，欢迎来到我的频道。今天带你一起看看，如何用 AI 制作视频配音。」</p>
+      </li>
+      <li>
+        <h3>选择由哪个声音来读</h3>
+        <p>点击当前声音的名称或声音选择框。在 <strong>My Voices</strong> 中选自己的克隆声音，或者选择刚才在声音库里找到的声音。确认选中的名称正确。</p>
+      </li>
+      <li>
+        <h3>选择模型，先用默认设置测试</h3>
+        <p>在 <strong>Model（模型）</strong> 中选择当前声音可用、并支持目标语言的模型。第一次使用可以先保留默认设置；需要调整语速、稳定性等参数时，再根据试听结果逐项修改。不同模型提供的设置可能不同。</p>
+      </li>
+      <li>
+        <h3>点击 Generate speech</h3>
+        <p>点击 <strong>Generate speech（生成语音）</strong>，等待音频生成。生成会使用账号积分，先看清页面显示的消耗量和剩余额度，再提交较长文案。</p>
+      </li>
+      <li>
+        <h3>试听并调整</h3>
+        <p>播放生成的音频，检查名字、数字的读法，以及停顿和语气。效果不合适，可以改文案的标点、句子长度或声音设置后重新生成。重新生成通常也会消耗积分，先把短段调好，再制作整篇。</p>
+      </li>
+      <li>
+        <h3>下载配音，导入剪辑软件</h3>
+        <p>满意后点击音频旁的<strong>下载图标</strong>，选择 <strong>MP3</strong> 或 <strong>WAV</strong>。MP3 文件较小，便于发送；WAV 适合导入剪映、Final Cut Pro 等软件继续剪辑。下载为 WAV 不会把原本的音频自动变成更高质量。</p>
+        <p>如果没有立即下载，可以到 <strong>History（历史记录）</strong> 找到之前生成的音频，再点击下载。</p>
+      </li>
+    </ol>
+    <p class="source">界面按钮名称可能随版本调整，以当前页面为准。<a href="https://elevenlabs.io/docs/eleven-creative/playground/text-to-speech">Text to Speech 官方操作与下载说明</a></p>
+  </section>
+
+  <section id="payment" aria-labelledby="payment-title">
+    <h2 id="payment-title">付款不方便怎么办？</h2>
+    <p>如果没办法在官网付款，也可以去<strong>闲鱼 App 搜索「ElevenLabs 成品号」</strong>。购买前确认套餐等级、剩余额度、有效期，以及账号是否独享。要做专业克隆，就确认账号具备 Creator 或更高套餐，并且还有可用的专业克隆名额。</p>
+    <p>成品号不是给自己的原账号充值。收到账号后，先在订阅页面核对实际套餐和额度；专业克隆仍需完成本人声音验证。</p>
+  </section>
+  <footer><a href="/">返回跨境资源站首页</a> · kjzyz.com</footer>
+</article></main>
+</body>
+</html>

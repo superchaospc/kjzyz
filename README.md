@@ -15,6 +15,7 @@
 | 准备美区 Apple ID 和小火箭 | [购买与使用指南（ReeGifts、KX Store）](./public/shadowrocket-apple-id.html) |
 | 在安卓手机安装海外 App | [APKPure 下载与安装图解](./public/android-app-guide.html) |
 | 订阅或充值 ChatGPT | [iPhone 礼品卡订阅与第三方充值指南](./public/chatgpt-recharge.html) |
+| 克隆声音并生成配音 | [ElevenLabs 套餐、声音克隆与 Text to Speech 教程](./public/elevenlabs-guide.html) |
 | 给创作者主页加打赏链接 | [Ko-fi 与 Buy Me a Coffee 注册及分享指南](./public/creator-tips-guide.html) |
 
 ## v1.3.0 · 2026-11-14
