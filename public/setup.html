@@ -286,6 +286,13 @@ nav.scrolled { border-bottom-color: var(--line); }
 }
 .step-body ul li { margin-bottom: 4px; }
 .step-body strong { color: var(--ink); font-weight: 600; }
+.step-body .download-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.step-body .download-link:hover { color: var(--accent-hover); }
 
 .kbd {
   font-family: var(--font-mono);
@@ -408,7 +415,7 @@ footer {
       <div class="step-num">01</div>
       <div class="step-body">
         <h4>下载并解压 v2rayN</h4>
-        <p>从客服处下载 v2rayN 的 Windows 安装包，将压缩文件解压到任意文件夹（建议新建一个固定目录长期使用）。</p>
+        <p>点击 <a class="download-link" href="https://github.com/2dust/v2rayN/releases" target="_blank" rel="noopener noreferrer">v2rayN Windows 下载</a>，在发布页的 <strong>Assets（下载文件）</strong> 中选择 Windows 压缩包，下载后解压到任意文件夹（建议新建一个固定目录长期使用）。</p>
       </div>
     </div>
 
@@ -479,11 +486,12 @@ footer {
       <div class="step-num">01</div>
       <div class="step-body">
         <h4>安装 App</h4>
-        <p>在 Android 手机上安装以下任意一个客户端（客服处通常会提供 APK 下载）：</p>
+        <p>点击以下链接，下载并安装任意一个 Android 客户端：</p>
         <ul>
-          <li><strong>v2rayNG</strong> — 经典款，功能完整</li>
-          <li><strong>NekoBox</strong> — 界面更现代，支持协议更多</li>
+          <li><a class="download-link" href="https://github.com/2dust/v2rayNG/releases" target="_blank" rel="noopener noreferrer">v2rayNG APK 下载</a> — 经典款，功能完整</li>
+          <li><a class="download-link" href="https://github.com/MatsuriDayo/NekoBoxForAndroid/releases" target="_blank" rel="noopener noreferrer">NekoBox APK 下载</a> — 界面更现代，支持协议更多</li>
         </ul>
+        <p style="margin-top: 10px;">打开发布页后，展开 <strong>Assets（下载文件）</strong>，选择适合手机的 <strong>.apk</strong> 安装包下载。</p>
       </div>
     </div>
 
