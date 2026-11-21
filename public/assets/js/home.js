@@ -270,22 +270,24 @@ const PRODUCTS = [
   {
     id: 'reegifts', symbol: 'Re', name: '购买网站一', slogan: '礼品卡 & Apple ID',
     description: '独立第三方礼品卡与 Apple ID 网站，购买及售后请联系该站客服',
-    color: '#1d1d1f', scenes: ['appleid'],
-    customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 21 4 21 4 12" fill="white"/><rect x="2" y="7" width="20" height="5" rx="0.5" fill="white"/><line x1="12" y1="21" x2="12" y2="7" stroke="#ff6b35"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z" fill="white"/></svg>',
+    color: '#943e2e', scenes: ['appleid'],
+    customLogo: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9h14l1 11H4L5 9Z" fill="#fff3df"/><path d="M8.5 10V7a3.5 3.5 0 0 1 7 0v3" stroke="#ffd79b"/><path d="M10 15h4" stroke="#943e2e"/></svg>',
     recommended: false, badge: null,
     affiliateUrl: 'https://www.reegifts.com/'
   },
   {
     id: 'waiquid', symbol: '外', name: '购买网站二', slogan: '美区 Apple ID',
     description: '提供美区及其他地区的 Apple ID，购买及售后请联系该站客服',
-    color: '#245b72', scenes: ['appleid'],
+    color: '#205d65', scenes: ['appleid'],
+    customLogo: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5" stroke="#effff8"/><ellipse cx="12" cy="12" rx="3.8" ry="8.5" stroke="#a3e7cf"/><path d="M4 9h16M4 15h16" stroke="#effff8"/></svg>',
     recommended: false, badge: null,
     affiliateUrl: 'https://waiquid.com/'
   },
   {
     id: 'guowaiid', symbol: '国', name: '购买网站三', slogan: '美区 Apple ID',
     description: '提供美区及其他地区的 Apple ID，购买及售后请联系该站客服',
-    color: '#514885', scenes: ['appleid'],
+    color: '#564480', scenes: ['appleid'],
+    customLogo: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m11 13-7 7M5.5 18.5l2 2m1-5 2 2" stroke="#f5de9c" stroke-width="3"/><circle cx="15.5" cy="8.5" r="5.5" stroke="#fff3d7" stroke-width="2.8"/><circle cx="17" cy="7" r="1.1" fill="#fff3d7"/></svg>',
     recommended: false, badge: null,
     affiliateUrl: 'https://www.guowaiid.com/'
   },
