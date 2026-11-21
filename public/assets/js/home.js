@@ -268,7 +268,7 @@ const PRODUCTS = [
 
   // ============ 美区 Apple ID & 其他国家 Apple ID（独立第三方网站）============
   {
-    id: 'reegifts', symbol: 'Re', name: '果卡（ReeGifts）', slogan: '礼品卡 & Apple ID',
+    id: 'reegifts', symbol: 'Re', name: '购买网站一', slogan: '礼品卡 & Apple ID',
     description: '独立第三方礼品卡与 Apple ID 网站，购买及售后请联系该站客服',
     color: '#1d1d1f', scenes: ['appleid'],
     customLogo: '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 21 4 21 4 12" fill="white"/><rect x="2" y="7" width="20" height="5" rx="0.5" fill="white"/><line x1="12" y1="21" x2="12" y2="7" stroke="#ff6b35"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z" fill="white"/></svg>',
@@ -276,14 +276,14 @@ const PRODUCTS = [
     affiliateUrl: 'https://www.reegifts.com/'
   },
   {
-    id: 'waiquid', symbol: '外', name: '外区 ID 账号商城', slogan: '美区 Apple ID',
+    id: 'waiquid', symbol: '外', name: '购买网站二', slogan: '美区 Apple ID',
     description: '提供美区及其他地区的 Apple ID，购买及售后请联系该站客服',
     color: '#245b72', scenes: ['appleid'],
     recommended: false, badge: null,
     affiliateUrl: 'https://waiquid.com/'
   },
   {
-    id: 'guowaiid', symbol: '国', name: '国外 ID', slogan: '美区 Apple ID',
+    id: 'guowaiid', symbol: '国', name: '购买网站三', slogan: '美区 Apple ID',
     description: '提供美区及其他地区的 Apple ID，购买及售后请联系该站客服',
     color: '#514885', scenes: ['appleid'],
     recommended: false, badge: null,
