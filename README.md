@@ -12,7 +12,7 @@
 | 准备 iPhone 并注册 TikTok | [iPhone 设置图解](./public/tiktok-iphone-setup.html) · [TikTok 注册与登录](./public/tiktok-guide.html) |
 | 开通 YouTube 或 WhatsApp | [YouTube 注册指南](./public/youtube-guide.html) · [WhatsApp 注册指南](./public/whatsapp-guide.html) |
 | 配置网络客户端 | [使用教程](./public/setup.html) · [VPN 机场购买与使用](./public/airport-guide.html) |
-| 准备美区 Apple ID 和小火箭 | [购买与使用指南（ReeGifts、KX Store）](./public/shadowrocket-apple-id.html) |
+| 准备美区 Apple ID 和小火箭 | [购买与使用指南](./public/shadowrocket-apple-id.html) |
 | 在安卓手机安装海外 App | [APKPure 下载与安装图解](./public/android-app-guide.html) |
 | 订阅或充值 ChatGPT | [iPhone 礼品卡订阅与第三方充值指南](./public/chatgpt-recharge.html) |
 | 克隆声音并生成配音 | [ElevenLabs 套餐、声音克隆与 Text to Speech 教程](./public/elevenlabs-guide.html) |
@@ -79,7 +79,7 @@ npx wrangler pages dev public
 
 - 首页资源卡片及其排序在 `public/assets/js/home.js` 中维护；首页教程入口在 `public/index.html` 中维护。
 - 修改机场名单时，同步更新 `airport-guide.html`、`tiktok-guide.html` 和 `tiktok-iphone-setup.html`；保留完整注册参数和邀请码，更新数量文案，免责声明放在链接下方。
-- Apple ID 购买链接保持 ReeGifts 在前、KX Store 在后。说明框按现有页面位置维护，不向首页或普通 App 下载步骤重复添加。
+- 美区 Apple ID 购买入口统一链接到果卡（ReeGifts）、外区 ID 账号商城和国外 ID 的首页。说明框按现有页面位置维护，不向首页或普通 App 下载步骤重复添加。
 - 自制图标与官方标识应明确区分；不要添加未经核实的价格、节点数量、稳定性或效果保证。
 - 修改首页脚本后，同步更新 `index.html` 中 `home.js` 的版本参数。修改教程后，同步更新 `sitemap.xml` 的修改日期；新增页面还需补齐首页入口和站点地图。
 
