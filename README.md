@@ -22,7 +22,7 @@
 
 - 新增安卓海外 App 安装图解、ChatGPT 充值指南，补充 YouTube 的 iPhone 下载步骤和相关准备说明。
 - 新增 vidIQ 工具入口与 YouTube 研究分类，更新 Suno 等首页资源。
-- 机场推荐统一为：**Bitz Net → 狗狗加速 → 白月光 → 宝可梦 → YKKCLOUD → TAG**，首页与三篇相关教程保持一致；宝可梦使用自制红白精灵球导航图标。
+- 机场推荐统一为：**Bitz Net → 狗狗加速 → 白月光 → Kitty Network → 宝可梦 → YKKCLOUD → TAG**，首页与三篇相关教程保持一致；Kitty Network 使用自制猫咪铃铛图标，宝可梦使用自制红白精灵球图标。
 - Apple ID 购买入口统一为 **ReeGifts（睿礼果号）→ KX Store**；相关购买说明明确第三方关系和客服责任。
 - 机场免责声明统一放在对应机场链接的**下方**。首页不显示机场或 Apple ID 说明框；ChatGPT 充值、客户端配置、Gmail、Outlook、YouTube 教程中已移除重复的 Apple ID 说明框。
 - 网站发布目录调整为 `public/`，首页及教程脚本拆分到独立文件，完善响应头、旧路径处理与移动端导航。
